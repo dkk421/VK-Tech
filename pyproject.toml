@@ -1,0 +1,18 @@
+[project]
+name = "medhack-ai-assistant"
+version = "0.1.0"
+description = "AI assistant for occupational health contraindication detection"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "openpyxl>=3.1.5",
+    "pandas>=3.0.3",
+    "plotly>=6.7.0",
+    "python-dotenv>=1.2.2",
+    "scikit-learn>=1.8.0",
+    "streamlit>=1.57.0",
+    "xgboost>=2.0.0",
+    "pydantic>=2.0",
+    "pdfplumber>=0.11.0",
+    "rapidfuzz>=3.0.0",
+]
