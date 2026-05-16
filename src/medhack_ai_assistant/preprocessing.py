@@ -1,6 +1,6 @@
 import pandas as pd
 
-from src.medhack_ai_assistant.data import validate_columns
+from .data import validate_columns
 
 
 def build_text_feature(
