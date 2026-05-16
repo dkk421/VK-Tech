@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from src.medhack_ai_assistant.config import (
+from .config import (
     ID_COLUMN,
     TARGET_COLUMN,
     TEST_PATH,
@@ -12,14 +12,14 @@ from src.medhack_ai_assistant.config import (
     SUBMISSION_PATH,
     ModelConfig,
 )
-from src.medhack_ai_assistant.data import load_data, save_submission, validate_columns
-from src.medhack_ai_assistant.ml import (
+from .data import load_data, save_submission, validate_columns
+from .ml import (
     ValidationResult,
     predict_with_threshold,
     train_and_validate,
     train_final_model,
 )
-from src.medhack_ai_assistant.preprocessing import build_text_feature
+from .preprocessing import build_text_feature
 
 
 @dataclass(frozen=True)

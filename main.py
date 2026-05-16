@@ -1,17 +1,18 @@
-from src.medhack_ai_assistant.pipeline import run_training_pipeline
+import sys
+from pathlib import Path
+
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
+
+from medhack_ai_assistant.pipeline import run_training_pipeline
+from medhack_ai_assistant.services.dashboard import get_dashboard_by_exam_id
 
 
 def main() -> None:
     result = run_training_pipeline()
-
-    print("Target distribution:")
-    print(result.target_distribution)
-    print(result.target_distribution_normalized)
-    print(f"Best threshold: {result.validation.threshold:.2f}")
-    print(f"Validation F1: {result.validation.f1:.4f}")
-    print(f"Submission saved to: {result.submission_path}")
-    print(result.submission["has_contraindications"].value_counts())
-
+    dashboard = get_dashboard_by_exam_id(1015884464)
+    print(dashboard.decision_label)
+    print(dashboard.diagnoses)
 
 if __name__ == "__main__":
     main()

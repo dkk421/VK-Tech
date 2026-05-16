@@ -8,7 +8,7 @@ from sklearn.metrics import f1_score
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 
-from src.medhack_ai_assistant.config import ModelConfig
+from .config import ModelConfig
 
 
 @dataclass(frozen=True)
