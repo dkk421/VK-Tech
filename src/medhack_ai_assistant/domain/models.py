@@ -1,4 +1,5 @@
 from dataclasses import asdict, dataclass
+from typing import Any
 
 
 @dataclass(frozen=True)
@@ -16,7 +17,8 @@ class SpecialistConclusion:
 
     @property
     def has_attention_marker(self) -> bool:
-        return self.has_diagnosis or bool(self.conclusion) or self.health_group not in {"", "1 группа"}
+        normal_health_group = self.health_group.strip().lower()
+        return self.has_diagnosis or bool(self.conclusion) or normal_health_group not in {"", "1 группа"}
 
 
 @dataclass(frozen=True)
@@ -48,6 +50,45 @@ class DashboardResult:
     normal_items: tuple[DashboardFinding, ...]
     decision_label: str
     decision_reason: str
+
+    def to_dict(self) -> dict:
+        return asdict(self)
+
+
+@dataclass(frozen=True)
+class QualityGateResult:
+    status: str
+    reasons: tuple[str, ...]
+    can_analyze: bool
+
+
+@dataclass(frozen=True)
+class MiningContext:
+    factor_risks: dict[str, dict[str, Any]]
+    factor_mkb_links: dict[str, list[dict[str, Any]]]
+    factor_specialist_links: dict[str, list[dict[str, Any]]]
+
+
+@dataclass(frozen=True)
+class RAGContext:
+    chunks: tuple[dict[str, Any], ...]
+    text: str
+    total_chars: int
+
+
+@dataclass(frozen=True)
+class AnalysisResult:
+    status: str
+    verdict: str
+    summary: str
+    factors: tuple[str, ...]
+    evidence: tuple[dict[str, Any], ...]
+    follow_up_draft: dict[str, Any]
+    quality_gate: QualityGateResult
+    rag_context: RAGContext
+    mining_context: MiningContext
+    raw_llm_response: dict[str, Any]
+    exam: PatientExam | None = None
 
     def to_dict(self) -> dict:
         return asdict(self)

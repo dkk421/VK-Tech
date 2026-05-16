@@ -1,0 +1,6795 @@
+{
+  "meta": {
+    "total_rows": 24861,
+    "positive_rows": 1138,
+    "bad_json_rows": 0,
+    "empty_log_rows": 1002
+  },
+  "top_assigned_factors": [
+    {
+      "value": "6.1",
+      "count": 10807,
+      "share": 0.097335
+    },
+    {
+      "value": "5.1",
+      "count": 9596,
+      "share": 0.086428
+    },
+    {
+      "value": "4.4",
+      "count": 9185,
+      "share": 0.082726
+    },
+    {
+      "value": "13",
+      "count": 9149,
+      "share": 0.082402
+    },
+    {
+      "value": "12",
+      "count": 7833,
+      "share": 0.070549
+    },
+    {
+      "value": "1.37.1",
+      "count": 4319,
+      "share": 0.0389
+    },
+    {
+      "value": "6.2",
+      "count": 4108,
+      "share": 0.036999
+    },
+    {
+      "value": "1.36",
+      "count": 4034,
+      "share": 0.036333
+    },
+    {
+      "value": "1.36.1",
+      "count": 3348,
+      "share": 0.030154
+    },
+    {
+      "value": "27",
+      "count": 3272,
+      "share": 0.02947
+    },
+    {
+      "value": "1.30.1",
+      "count": 2846,
+      "share": 0.025633
+    },
+    {
+      "value": "9",
+      "count": 2745,
+      "share": 0.024723
+    },
+    {
+      "value": "17",
+      "count": 2333,
+      "share": 0.021013
+    },
+    {
+      "value": "1.24",
+      "count": 2155,
+      "share": 0.019409
+    },
+    {
+      "value": "1.3",
+      "count": 1953,
+      "share": 0.01759
+    },
+    {
+      "value": "1.1",
+      "count": 1722,
+      "share": 0.015509
+    },
+    {
+      "value": "1.36.2",
+      "count": 1676,
+      "share": 0.015095
+    },
+    {
+      "value": "2.4.3",
+      "count": 1566,
+      "share": 0.014104
+    },
+    {
+      "value": "1.50",
+      "count": 1474,
+      "share": 0.013276
+    },
+    {
+      "value": "4.3.2",
+      "count": 1454,
+      "share": 0.013096
+    },
+    {
+      "value": "1.34.1",
+      "count": 1418,
+      "share": 0.012771
+    },
+    {
+      "value": "18.1",
+      "count": 1248,
+      "share": 0.01124
+    },
+    {
+      "value": "4.9",
+      "count": 1162,
+      "share": 0.010466
+    },
+    {
+      "value": "1.19.1",
+      "count": 1131,
+      "share": 0.010187
+    },
+    {
+      "value": "4.8",
+      "count": 1110,
+      "share": 0.009997
+    },
+    {
+      "value": "14",
+      "count": 1085,
+      "share": 0.009772
+    },
+    {
+      "value": "23",
+      "count": 941,
+      "share": 0.008475
+    },
+    {
+      "value": "15",
+      "count": 923,
+      "share": 0.008313
+    },
+    {
+      "value": "1.39",
+      "count": 923,
+      "share": 0.008313
+    },
+    {
+      "value": "4.3.1",
+      "count": 891,
+      "share": 0.008025
+    },
+    {
+      "value": "1.2",
+      "count": 817,
+      "share": 0.007358
+    },
+    {
+      "value": "18.2",
+      "count": 739,
+      "share": 0.006656
+    },
+    {
+      "value": "1.34",
+      "count": 701,
+      "share": 0.006314
+    },
+    {
+      "value": "4.1",
+      "count": 610,
+      "share": 0.005494
+    },
+    {
+      "value": "2.4.2",
+      "count": 609,
+      "share": 0.005485
+    },
+    {
+      "value": "1.29.1",
+      "count": 517,
+      "share": 0.004656
+    },
+    {
+      "value": "1.8.1.1",
+      "count": 492,
+      "share": 0.004431
+    },
+    {
+      "value": "6",
+      "count": 454,
+      "share": 0.004089
+    },
+    {
+      "value": "4.2.5",
+      "count": 430,
+      "share": 0.003873
+    },
+    {
+      "value": "11.1",
+      "count": 407,
+      "share": 0.003666
+    },
+    {
+      "value": "1.14.1",
+      "count": 396,
+      "share": 0.003567
+    },
+    {
+      "value": "3.1.2",
+      "count": 377,
+      "share": 0.003396
+    },
+    {
+      "value": "1.49.4",
+      "count": 352,
+      "share": 0.00317
+    },
+    {
+      "value": "24",
+      "count": 351,
+      "share": 0.003161
+    },
+    {
+      "value": "3.1.7",
+      "count": 349,
+      "share": 0.003143
+    },
+    {
+      "value": "1.8.1",
+      "count": 329,
+      "share": 0.002963
+    },
+    {
+      "value": "1.5",
+      "count": 287,
+      "share": 0.002585
+    },
+    {
+      "value": "1.17",
+      "count": 278,
+      "share": 0.002504
+    },
+    {
+      "value": "3.1.1",
+      "count": 266,
+      "share": 0.002396
+    },
+    {
+      "value": "1.15",
+      "count": 266,
+      "share": 0.002396
+    },
+    {
+      "value": "1.40.1",
+      "count": 261,
+      "share": 0.002351
+    },
+    {
+      "value": "4.2.3",
+      "count": 224,
+      "share": 0.002017
+    },
+    {
+      "value": "4.2.1",
+      "count": 221,
+      "share": 0.00199
+    },
+    {
+      "value": "8",
+      "count": 215,
+      "share": 0.001936
+    },
+    {
+      "value": "1.14.2",
+      "count": 198,
+      "share": 0.001783
+    },
+    {
+      "value": "1.43.2",
+      "count": 181,
+      "share": 0.00163
+    },
+    {
+      "value": "1.8.1.2",
+      "count": 175,
+      "share": 0.001576
+    },
+    {
+      "value": "1.30",
+      "count": 150,
+      "share": 0.001351
+    },
+    {
+      "value": "1.29.2",
+      "count": 148,
+      "share": 0.001333
+    },
+    {
+      "value": "26",
+      "count": 146,
+      "share": 0.001315
+    },
+    {
+      "value": "1.48",
+      "count": 145,
+      "share": 0.001306
+    },
+    {
+      "value": "1.8.4.1",
+      "count": 142,
+      "share": 0.001279
+    },
+    {
+      "value": "1.45.3",
+      "count": 141,
+      "share": 0.00127
+    },
+    {
+      "value": "1.29.4",
+      "count": 140,
+      "share": 0.001261
+    },
+    {
+      "value": "4.7",
+      "count": 139,
+      "share": 0.001252
+    },
+    {
+      "value": "1.42",
+      "count": 137,
+      "share": 0.001234
+    },
+    {
+      "value": "1.29.3",
+      "count": 127,
+      "share": 0.001144
+    },
+    {
+      "value": "4.6",
+      "count": 117,
+      "share": 0.001054
+    },
+    {
+      "value": "1.11",
+      "count": 108,
+      "share": 0.000973
+    },
+    {
+      "value": "25",
+      "count": 103,
+      "share": 0.000928
+    },
+    {
+      "value": "3.1.4",
+      "count": 97,
+      "share": 0.000874
+    },
+    {
+      "value": "22",
+      "count": 93,
+      "share": 0.000838
+    },
+    {
+      "value": "5.2.1",
+      "count": 90,
+      "share": 0.000811
+    },
+    {
+      "value": "4.2",
+      "count": 87,
+      "share": 0.000784
+    },
+    {
+      "value": "1.23",
+      "count": 77,
+      "share": 0.000694
+    },
+    {
+      "value": "1.33",
+      "count": 71,
+      "share": 0.000639
+    },
+    {
+      "value": "3.1.8.3",
+      "count": 69,
+      "share": 0.000621
+    },
+    {
+      "value": "11.3",
+      "count": 68,
+      "share": 0.000612
+    },
+    {
+      "value": "1.49.13",
+      "count": 65,
+      "share": 0.000585
+    },
+    {
+      "value": "4.2.4",
+      "count": 61,
+      "share": 0.000549
+    },
+    {
+      "value": "1.37.2",
+      "count": 59,
+      "share": 0.000531
+    },
+    {
+      "value": "1.37.1.1",
+      "count": 52,
+      "share": 0.000468
+    },
+    {
+      "value": "3.2",
+      "count": 51,
+      "share": 0.000459
+    },
+    {
+      "value": "5.2.2",
+      "count": 42,
+      "share": 0.000378
+    },
+    {
+      "value": "1.19.2",
+      "count": 41,
+      "share": 0.000369
+    },
+    {
+      "value": "4.2.2",
+      "count": 40,
+      "share": 0.00036
+    },
+    {
+      "value": "3.1.9.4",
+      "count": 37,
+      "share": 0.000333
+    },
+    {
+      "value": "1.18.1",
+      "count": 36,
+      "share": 0.000324
+    },
+    {
+      "value": "11.4",
+      "count": 36,
+      "share": 0.000324
+    },
+    {
+      "value": "1.27.1",
+      "count": 34,
+      "share": 0.000306
+    },
+    {
+      "value": "1.45.1",
+      "count": 34,
+      "share": 0.000306
+    },
+    {
+      "value": "1.8.2",
+      "count": 33,
+      "share": 0.000297
+    },
+    {
+      "value": "1.5.1",
+      "count": 32,
+      "share": 0.000288
+    },
+    {
+      "value": "1.44",
+      "count": 32,
+      "share": 0.000288
+    },
+    {
+      "value": "1.10",
+      "count": 32,
+      "share": 0.000288
+    },
+    {
+      "value": "1.38",
+      "count": 31,
+      "share": 0.000279
+    },
+    {
+      "value": "3.1.3",
+      "count": 27,
+      "share": 0.000243
+    },
+    {
+      "value": "1.49",
+      "count": 27,
+      "share": 0.000243
+    },
+    {
+      "value": "1.27",
+      "count": 22,
+      "share": 0.000198
+    },
+    {
+      "value": "1.15.1",
+      "count": 22,
+      "share": 0.000198
+    },
+    {
+      "value": "1.29",
+      "count": 22,
+      "share": 0.000198
+    },
+    {
+      "value": "3.1.8.1",
+      "count": 20,
+      "share": 0.00018
+    },
+    {
+      "value": "11",
+      "count": 20,
+      "share": 0.00018
+    },
+    {
+      "value": "1.20",
+      "count": 19,
+      "share": 0.000171
+    },
+    {
+      "value": "1.35",
+      "count": 18,
+      "share": 0.000162
+    },
+    {
+      "value": "1.8.3",
+      "count": 18,
+      "share": 0.000162
+    },
+    {
+      "value": "1.25",
+      "count": 17,
+      "share": 0.000153
+    },
+    {
+      "value": "1.4",
+      "count": 17,
+      "share": 0.000153
+    },
+    {
+      "value": "1.18.3",
+      "count": 17,
+      "share": 0.000153
+    },
+    {
+      "value": "1.16",
+      "count": 17,
+      "share": 0.000153
+    },
+    {
+      "value": "1.36.3",
+      "count": 15,
+      "share": 0.000135
+    },
+    {
+      "value": "1.37.1.2",
+      "count": 15,
+      "share": 0.000135
+    },
+    {
+      "value": "1.47.3",
+      "count": 14,
+      "share": 0.000126
+    },
+    {
+      "value": "1.46",
+      "count": 14,
+      "share": 0.000126
+    },
+    {
+      "value": "1.49.14",
+      "count": 14,
+      "share": 0.000126
+    },
+    {
+      "value": "2.4.1",
+      "count": 12,
+      "share": 0.000108
+    },
+    {
+      "value": "1.49.7",
+      "count": 12,
+      "share": 0.000108
+    },
+    {
+      "value": "1.27.2",
+      "count": 11,
+      "share": 9.9e-05
+    },
+    {
+      "value": "1.8.2.1",
+      "count": 11,
+      "share": 9.9e-05
+    },
+    {
+      "value": "1.19.3",
+      "count": 11,
+      "share": 9.9e-05
+    },
+    {
+      "value": "1.40",
+      "count": 11,
+      "share": 9.9e-05
+    },
+    {
+      "value": "1.7.1",
+      "count": 10,
+      "share": 9e-05
+    },
+    {
+      "value": "1.22",
+      "count": 10,
+      "share": 9e-05
+    },
+    {
+      "value": "1.40.2",
+      "count": 10,
+      "share": 9e-05
+    },
+    {
+      "value": "1.43.1",
+      "count": 10,
+      "share": 9e-05
+    },
+    {
+      "value": "1.49.6",
+      "count": 10,
+      "share": 9e-05
+    },
+    {
+      "value": "16",
+      "count": 10,
+      "share": 9e-05
+    },
+    {
+      "value": "4.5",
+      "count": 9,
+      "share": 8.1e-05
+    },
+    {
+      "value": "1.49.11",
+      "count": 9,
+      "share": 8.1e-05
+    },
+    {
+      "value": "1.49.5",
+      "count": 9,
+      "share": 8.1e-05
+    },
+    {
+      "value": "1.49.8",
+      "count": 9,
+      "share": 8.1e-05
+    },
+    {
+      "value": "3.1.5",
+      "count": 9,
+      "share": 8.1e-05
+    },
+    {
+      "value": "1.6",
+      "count": 8,
+      "share": 7.2e-05
+    },
+    {
+      "value": "1.8.3.1",
+      "count": 8,
+      "share": 7.2e-05
+    },
+    {
+      "value": "1.8.4",
+      "count": 8,
+      "share": 7.2e-05
+    },
+    {
+      "value": "1.12",
+      "count": 8,
+      "share": 7.2e-05
+    },
+    {
+      "value": "1.13",
+      "count": 8,
+      "share": 7.2e-05
+    },
+    {
+      "value": "1.18.2",
+      "count": 8,
+      "share": 7.2e-05
+    },
+    {
+      "value": "1.26",
+      "count": 8,
+      "share": 7.2e-05
+    },
+    {
+      "value": "1.34.2",
+      "count": 8,
+      "share": 7.2e-05
+    },
+    {
+      "value": "1.49.1",
+      "count": 8,
+      "share": 7.2e-05
+    },
+    {
+      "value": "1.51.1",
+      "count": 8,
+      "share": 7.2e-05
+    },
+    {
+      "value": "1.51.2",
+      "count": 8,
+      "share": 7.2e-05
+    },
+    {
+      "value": "1.53.1",
+      "count": 8,
+      "share": 7.2e-05
+    },
+    {
+      "value": "1.7",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.7.2",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.8.2.2",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.8.3.2",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.8.4.2",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.9",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.14",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.21",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.28",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.29.5",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.31",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.32",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.41",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.43",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.45",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.45.2",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.47",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.47.1",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.47.10",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.47.11",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.47.12",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.47.13",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.47.14",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.47.15",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.47.16",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.47.2",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.47.4",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.47.5",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.47.6",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.47.7",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.47.9",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.49.10",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.49.12",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.49.2",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.49.3",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.49.9",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.52.1",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.52.2",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.52.3",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.52.4",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.52.5",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.52.6",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.52.7",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.53",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "1.53.2",
+      "count": 7,
+      "share": 6.3e-05
+    },
+    {
+      "value": "3.1.9.2",
+      "count": 6,
+      "share": 5.4e-05
+    },
+    {
+      "value": "1.47.8",
+      "count": 6,
+      "share": 5.4e-05
+    },
+    {
+      "value": "2.3",
+      "count": 5,
+      "share": 4.5e-05
+    },
+    {
+      "value": "3.4",
+      "count": 4,
+      "share": 3.6e-05
+    },
+    {
+      "value": "3.1.8.2",
+      "count": 4,
+      "share": 3.6e-05
+    },
+    {
+      "value": "7",
+      "count": 4,
+      "share": 3.6e-05
+    },
+    {
+      "value": "11.2",
+      "count": 3,
+      "share": 2.7e-05
+    },
+    {
+      "value": "4.10",
+      "count": 3,
+      "share": 2.7e-05
+    },
+    {
+      "value": "3.1.10",
+      "count": 1,
+      "share": 9e-06
+    },
+    {
+      "value": "99",
+      "count": 1,
+      "share": 9e-06
+    },
+    {
+      "value": "19.1",
+      "count": 1,
+      "share": 9e-06
+    }
+  ],
+  "top_contraindicated_factors": [
+    {
+      "value": "6.1",
+      "count": 697,
+      "share": 0.430513
+    },
+    {
+      "value": "17",
+      "count": 208,
+      "share": 0.128474
+    },
+    {
+      "value": "14",
+      "count": 88,
+      "share": 0.054355
+    },
+    {
+      "value": "5.1",
+      "count": 88,
+      "share": 0.054355
+    },
+    {
+      "value": "13",
+      "count": 65,
+      "share": 0.040148
+    },
+    {
+      "value": "6.2",
+      "count": 54,
+      "share": 0.033354
+    },
+    {
+      "value": "4.4",
+      "count": 45,
+      "share": 0.027795
+    },
+    {
+      "value": "12",
+      "count": 43,
+      "share": 0.02656
+    },
+    {
+      "value": "18.1",
+      "count": 33,
+      "share": 0.020383
+    },
+    {
+      "value": "6",
+      "count": 28,
+      "share": 0.017295
+    },
+    {
+      "value": "1.37.1",
+      "count": 26,
+      "share": 0.016059
+    },
+    {
+      "value": "9",
+      "count": 22,
+      "share": 0.013589
+    },
+    {
+      "value": "18.2",
+      "count": 21,
+      "share": 0.012971
+    },
+    {
+      "value": "15",
+      "count": 17,
+      "share": 0.0105
+    },
+    {
+      "value": "1.36.1",
+      "count": 14,
+      "share": 0.008647
+    },
+    {
+      "value": "2.4.3",
+      "count": 14,
+      "share": 0.008647
+    },
+    {
+      "value": "1.36.2",
+      "count": 11,
+      "share": 0.006794
+    },
+    {
+      "value": "1.50",
+      "count": 11,
+      "share": 0.006794
+    },
+    {
+      "value": "1.36",
+      "count": 11,
+      "share": 0.006794
+    },
+    {
+      "value": "1.1",
+      "count": 9,
+      "share": 0.005559
+    },
+    {
+      "value": "4.3.1",
+      "count": 8,
+      "share": 0.004941
+    },
+    {
+      "value": "1.24",
+      "count": 7,
+      "share": 0.004324
+    },
+    {
+      "value": "1.34.1",
+      "count": 7,
+      "share": 0.004324
+    },
+    {
+      "value": "4.3.2",
+      "count": 7,
+      "share": 0.004324
+    },
+    {
+      "value": "4.1",
+      "count": 6,
+      "share": 0.003706
+    },
+    {
+      "value": "2.4.2",
+      "count": 6,
+      "share": 0.003706
+    },
+    {
+      "value": "1.3",
+      "count": 5,
+      "share": 0.003088
+    },
+    {
+      "value": "1.15",
+      "count": 5,
+      "share": 0.003088
+    },
+    {
+      "value": "4.8",
+      "count": 5,
+      "share": 0.003088
+    },
+    {
+      "value": "1.14.2",
+      "count": 4,
+      "share": 0.002471
+    },
+    {
+      "value": "1.8.1.1",
+      "count": 3,
+      "share": 0.001853
+    },
+    {
+      "value": "1.30.1",
+      "count": 2,
+      "share": 0.001235
+    },
+    {
+      "value": "1.19.1",
+      "count": 2,
+      "share": 0.001235
+    },
+    {
+      "value": "1.25",
+      "count": 2,
+      "share": 0.001235
+    },
+    {
+      "value": "1.39",
+      "count": 2,
+      "share": 0.001235
+    },
+    {
+      "value": "3.1.1",
+      "count": 2,
+      "share": 0.001235
+    },
+    {
+      "value": "4.9",
+      "count": 2,
+      "share": 0.001235
+    },
+    {
+      "value": "8",
+      "count": 2,
+      "share": 0.001235
+    },
+    {
+      "value": "11.1",
+      "count": 2,
+      "share": 0.001235
+    },
+    {
+      "value": "22",
+      "count": 2,
+      "share": 0.001235
+    },
+    {
+      "value": "1.27",
+      "count": 2,
+      "share": 0.001235
+    },
+    {
+      "value": "1.40.1",
+      "count": 2,
+      "share": 0.001235
+    },
+    {
+      "value": "1.49.4",
+      "count": 2,
+      "share": 0.001235
+    },
+    {
+      "value": "1.45.1",
+      "count": 2,
+      "share": 0.001235
+    },
+    {
+      "value": "3.1.7",
+      "count": 2,
+      "share": 0.001235
+    },
+    {
+      "value": "1.20",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "1.8.1",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "3.1.8.3",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "1.17",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "4.7",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "11.3",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "4.2.1",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "4.2.2",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "4.2.3",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "4.2.4",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "1.5",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "1.14.1",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "1.43.2",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "3.1.2",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "1.38",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "1.29.1",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "1.29.2",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "1.29.4",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "1.30",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "1.45.3",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "1.48",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "1.34",
+      "count": 1,
+      "share": 0.000618
+    },
+    {
+      "value": "1.2",
+      "count": 1,
+      "share": 0.000618
+    }
+  ],
+  "factor_risks": {
+    "4.4": {
+      "assigned_count": 9185,
+      "positive_count": 588,
+      "risk": 0.064017
+    },
+    "6.1": {
+      "assigned_count": 10807,
+      "positive_count": 847,
+      "risk": 0.078375
+    },
+    "12": {
+      "assigned_count": 7833,
+      "positive_count": 524,
+      "risk": 0.066896
+    },
+    "13": {
+      "assigned_count": 9149,
+      "positive_count": 674,
+      "risk": 0.073669
+    },
+    "14": {
+      "assigned_count": 1085,
+      "positive_count": 92,
+      "risk": 0.084793
+    },
+    "17": {
+      "assigned_count": 2333,
+      "positive_count": 256,
+      "risk": 0.10973
+    },
+    "18.1": {
+      "assigned_count": 1248,
+      "positive_count": 46,
+      "risk": 0.036859
+    },
+    "23": {
+      "assigned_count": 941,
+      "positive_count": 16,
+      "risk": 0.017003
+    },
+    "1.5.1": {
+      "assigned_count": 32,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.36.1": {
+      "assigned_count": 3348,
+      "positive_count": 233,
+      "risk": 0.069594
+    },
+    "1.37.1": {
+      "assigned_count": 4319,
+      "positive_count": 291,
+      "risk": 0.067377
+    },
+    "5.1": {
+      "assigned_count": 9596,
+      "positive_count": 650,
+      "risk": 0.067737
+    },
+    "9": {
+      "assigned_count": 2745,
+      "positive_count": 122,
+      "risk": 0.044444
+    },
+    "1.24": {
+      "assigned_count": 2155,
+      "positive_count": 153,
+      "risk": 0.070998
+    },
+    "1.34.1": {
+      "assigned_count": 1418,
+      "positive_count": 77,
+      "risk": 0.054302
+    },
+    "1.36": {
+      "assigned_count": 4034,
+      "positive_count": 252,
+      "risk": 0.062469
+    },
+    "1.3": {
+      "assigned_count": 1953,
+      "positive_count": 135,
+      "risk": 0.069124
+    },
+    "6.2": {
+      "assigned_count": 4108,
+      "positive_count": 126,
+      "risk": 0.030672
+    },
+    "27": {
+      "assigned_count": 3272,
+      "positive_count": 27,
+      "risk": 0.008252
+    },
+    "1.1": {
+      "assigned_count": 1722,
+      "positive_count": 145,
+      "risk": 0.084204
+    },
+    "2.4.3": {
+      "assigned_count": 1566,
+      "positive_count": 16,
+      "risk": 0.010217
+    },
+    "4.9": {
+      "assigned_count": 1162,
+      "positive_count": 61,
+      "risk": 0.052496
+    },
+    "1.50": {
+      "assigned_count": 1474,
+      "positive_count": 127,
+      "risk": 0.08616
+    },
+    "4.3.2": {
+      "assigned_count": 1454,
+      "positive_count": 83,
+      "risk": 0.057084
+    },
+    "18.2": {
+      "assigned_count": 739,
+      "positive_count": 23,
+      "risk": 0.031123
+    },
+    "1.2": {
+      "assigned_count": 817,
+      "positive_count": 59,
+      "risk": 0.072215
+    },
+    "1.30.1": {
+      "assigned_count": 2846,
+      "positive_count": 179,
+      "risk": 0.062895
+    },
+    "1.34": {
+      "assigned_count": 701,
+      "positive_count": 49,
+      "risk": 0.0699
+    },
+    "3.1.1": {
+      "assigned_count": 266,
+      "positive_count": 16,
+      "risk": 0.06015
+    },
+    "3.1.2": {
+      "assigned_count": 377,
+      "positive_count": 35,
+      "risk": 0.092838
+    },
+    "1.49.4": {
+      "assigned_count": 352,
+      "positive_count": 18,
+      "risk": 0.051136
+    },
+    "4.8": {
+      "assigned_count": 1110,
+      "positive_count": 68,
+      "risk": 0.061261
+    },
+    "4.2.3": {
+      "assigned_count": 224,
+      "positive_count": 16,
+      "risk": 0.071429
+    },
+    "4.2.5": {
+      "assigned_count": 430,
+      "positive_count": 6,
+      "risk": 0.013953
+    },
+    "4.3.1": {
+      "assigned_count": 891,
+      "positive_count": 63,
+      "risk": 0.070707
+    },
+    "1.23": {
+      "assigned_count": 77,
+      "positive_count": 2,
+      "risk": 0.025974
+    },
+    "4.2.1": {
+      "assigned_count": 221,
+      "positive_count": 8,
+      "risk": 0.036199
+    },
+    "1.8.1": {
+      "assigned_count": 329,
+      "positive_count": 18,
+      "risk": 0.054711
+    },
+    "1.14.1": {
+      "assigned_count": 396,
+      "positive_count": 19,
+      "risk": 0.04798
+    },
+    "1.19.1": {
+      "assigned_count": 1131,
+      "positive_count": 85,
+      "risk": 0.075155
+    },
+    "1.33": {
+      "assigned_count": 71,
+      "positive_count": 2,
+      "risk": 0.028169
+    },
+    "4.1": {
+      "assigned_count": 610,
+      "positive_count": 13,
+      "risk": 0.021311
+    },
+    "2.4.2": {
+      "assigned_count": 609,
+      "positive_count": 6,
+      "risk": 0.009852
+    },
+    "1.29.1": {
+      "assigned_count": 517,
+      "positive_count": 43,
+      "risk": 0.083172
+    },
+    "1.40.1": {
+      "assigned_count": 261,
+      "positive_count": 18,
+      "risk": 0.068966
+    },
+    "11.3": {
+      "assigned_count": 68,
+      "positive_count": 3,
+      "risk": 0.044118
+    },
+    "1.36.2": {
+      "assigned_count": 1676,
+      "positive_count": 110,
+      "risk": 0.065632
+    },
+    "15": {
+      "assigned_count": 923,
+      "positive_count": 59,
+      "risk": 0.063922
+    },
+    "24": {
+      "assigned_count": 351,
+      "positive_count": 21,
+      "risk": 0.059829
+    },
+    "3.1.7": {
+      "assigned_count": 349,
+      "positive_count": 25,
+      "risk": 0.071633
+    },
+    "1.8.4.1": {
+      "assigned_count": 142,
+      "positive_count": 11,
+      "risk": 0.077465
+    },
+    "1.17": {
+      "assigned_count": 278,
+      "positive_count": 38,
+      "risk": 0.136691
+    },
+    "1.39": {
+      "assigned_count": 923,
+      "positive_count": 81,
+      "risk": 0.087757
+    },
+    "3.1.8.1": {
+      "assigned_count": 20,
+      "positive_count": 2,
+      "risk": 0.1
+    },
+    "1.5": {
+      "assigned_count": 287,
+      "positive_count": 13,
+      "risk": 0.045296
+    },
+    "1.29.3": {
+      "assigned_count": 127,
+      "positive_count": 8,
+      "risk": 0.062992
+    },
+    "6": {
+      "assigned_count": 454,
+      "positive_count": 35,
+      "risk": 0.077093
+    },
+    "1.43.2": {
+      "assigned_count": 181,
+      "positive_count": 11,
+      "risk": 0.060773
+    },
+    "3.2": {
+      "assigned_count": 51,
+      "positive_count": 9,
+      "risk": 0.176471
+    },
+    "8": {
+      "assigned_count": 215,
+      "positive_count": 4,
+      "risk": 0.018605
+    },
+    "5.2.1": {
+      "assigned_count": 90,
+      "positive_count": 1,
+      "risk": 0.011111
+    },
+    "1.11": {
+      "assigned_count": 108,
+      "positive_count": 7,
+      "risk": 0.064815
+    },
+    "4.2": {
+      "assigned_count": 87,
+      "positive_count": 4,
+      "risk": 0.045977
+    },
+    "1.8.1.1": {
+      "assigned_count": 492,
+      "positive_count": 30,
+      "risk": 0.060976
+    },
+    "1.14.2": {
+      "assigned_count": 198,
+      "positive_count": 13,
+      "risk": 0.065657
+    },
+    "1.15": {
+      "assigned_count": 266,
+      "positive_count": 16,
+      "risk": 0.06015
+    },
+    "1.29.2": {
+      "assigned_count": 148,
+      "positive_count": 5,
+      "risk": 0.033784
+    },
+    "1.29.4": {
+      "assigned_count": 140,
+      "positive_count": 6,
+      "risk": 0.042857
+    },
+    "1.30": {
+      "assigned_count": 150,
+      "positive_count": 7,
+      "risk": 0.046667
+    },
+    "1.45.3": {
+      "assigned_count": 141,
+      "positive_count": 6,
+      "risk": 0.042553
+    },
+    "1.49.13": {
+      "assigned_count": 65,
+      "positive_count": 1,
+      "risk": 0.015385
+    },
+    "11.1": {
+      "assigned_count": 407,
+      "positive_count": 6,
+      "risk": 0.014742
+    },
+    "26": {
+      "assigned_count": 146,
+      "positive_count": 4,
+      "risk": 0.027397
+    },
+    "1.27.1": {
+      "assigned_count": 34,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.8.1.2": {
+      "assigned_count": 175,
+      "positive_count": 6,
+      "risk": 0.034286
+    },
+    "3.1.4": {
+      "assigned_count": 97,
+      "positive_count": 2,
+      "risk": 0.020619
+    },
+    "1.47.3": {
+      "assigned_count": 14,
+      "positive_count": 1,
+      "risk": 0.071429
+    },
+    "4.2.2": {
+      "assigned_count": 40,
+      "positive_count": 5,
+      "risk": 0.125
+    },
+    "4.2.4": {
+      "assigned_count": 61,
+      "positive_count": 5,
+      "risk": 0.081967
+    },
+    "1.18.1": {
+      "assigned_count": 36,
+      "positive_count": 2,
+      "risk": 0.055556
+    },
+    "3.1.3": {
+      "assigned_count": 27,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "4.7": {
+      "assigned_count": 139,
+      "positive_count": 7,
+      "risk": 0.05036
+    },
+    "4.6": {
+      "assigned_count": 117,
+      "positive_count": 2,
+      "risk": 0.017094
+    },
+    "1.25": {
+      "assigned_count": 17,
+      "positive_count": 2,
+      "risk": 0.117647
+    },
+    "1.27.2": {
+      "assigned_count": 11,
+      "positive_count": 1,
+      "risk": 0.090909
+    },
+    "1.37.1.1": {
+      "assigned_count": 52,
+      "positive_count": 4,
+      "risk": 0.076923
+    },
+    "1.48": {
+      "assigned_count": 145,
+      "positive_count": 3,
+      "risk": 0.02069
+    },
+    "1.37.2": {
+      "assigned_count": 59,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "3.1.9.4": {
+      "assigned_count": 37,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "3.1.8.3": {
+      "assigned_count": 69,
+      "positive_count": 8,
+      "risk": 0.115942
+    },
+    "25": {
+      "assigned_count": 103,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "5.2.2": {
+      "assigned_count": 42,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "22": {
+      "assigned_count": 93,
+      "positive_count": 4,
+      "risk": 0.043011
+    },
+    "1.42": {
+      "assigned_count": 137,
+      "positive_count": 6,
+      "risk": 0.043796
+    },
+    "1.19.2": {
+      "assigned_count": 41,
+      "positive_count": 1,
+      "risk": 0.02439
+    },
+    "1.4": {
+      "assigned_count": 17,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.8.2": {
+      "assigned_count": 33,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "11.4": {
+      "assigned_count": 36,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "2.3": {
+      "assigned_count": 5,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "2.4.1": {
+      "assigned_count": 12,
+      "positive_count": 1,
+      "risk": 0.083333
+    },
+    "1.18.3": {
+      "assigned_count": 17,
+      "positive_count": 2,
+      "risk": 0.117647
+    },
+    "1.20": {
+      "assigned_count": 19,
+      "positive_count": 3,
+      "risk": 0.157895
+    },
+    "1.27": {
+      "assigned_count": 22,
+      "positive_count": 3,
+      "risk": 0.136364
+    },
+    "1.44": {
+      "assigned_count": 32,
+      "positive_count": 2,
+      "risk": 0.0625
+    },
+    "1.45.1": {
+      "assigned_count": 34,
+      "positive_count": 5,
+      "risk": 0.147059
+    },
+    "1.10": {
+      "assigned_count": 32,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "3.4": {
+      "assigned_count": 4,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "4.5": {
+      "assigned_count": 9,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "3.1.10": {
+      "assigned_count": 1,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.38": {
+      "assigned_count": 31,
+      "positive_count": 3,
+      "risk": 0.096774
+    },
+    "1.16": {
+      "assigned_count": 17,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.35": {
+      "assigned_count": 18,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.6": {
+      "assigned_count": 8,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.7": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.7.1": {
+      "assigned_count": 10,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.7.2": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.8.2.1": {
+      "assigned_count": 11,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.8.2.2": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.8.3": {
+      "assigned_count": 18,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.8.3.1": {
+      "assigned_count": 8,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.8.3.2": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.8.4": {
+      "assigned_count": 8,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.8.4.2": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.9": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.12": {
+      "assigned_count": 8,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.13": {
+      "assigned_count": 8,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.14": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.15.1": {
+      "assigned_count": 22,
+      "positive_count": 4,
+      "risk": 0.181818
+    },
+    "1.18.2": {
+      "assigned_count": 8,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.19.3": {
+      "assigned_count": 11,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.21": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.22": {
+      "assigned_count": 10,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.26": {
+      "assigned_count": 8,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.28": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.29": {
+      "assigned_count": 22,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.29.5": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.31": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.32": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.34.2": {
+      "assigned_count": 8,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.36.3": {
+      "assigned_count": 15,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.37.1.2": {
+      "assigned_count": 15,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.40": {
+      "assigned_count": 11,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.40.2": {
+      "assigned_count": 10,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.41": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.43": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.43.1": {
+      "assigned_count": 10,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.45": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.45.2": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.46": {
+      "assigned_count": 14,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.47": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.47.1": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.47.10": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.47.11": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.47.12": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.47.13": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.47.14": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.47.15": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.47.16": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.47.2": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.47.4": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.47.5": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.47.6": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.47.7": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.47.9": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.49": {
+      "assigned_count": 27,
+      "positive_count": 1,
+      "risk": 0.037037
+    },
+    "1.49.1": {
+      "assigned_count": 8,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.49.10": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.49.11": {
+      "assigned_count": 9,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.49.12": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.49.14": {
+      "assigned_count": 14,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.49.2": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.49.3": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.49.5": {
+      "assigned_count": 9,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.49.6": {
+      "assigned_count": 10,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.49.7": {
+      "assigned_count": 12,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.49.8": {
+      "assigned_count": 9,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.49.9": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.51.1": {
+      "assigned_count": 8,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.51.2": {
+      "assigned_count": 8,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.52.1": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.52.2": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.52.3": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.52.4": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.52.5": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.52.6": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.52.7": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.53": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.53.1": {
+      "assigned_count": 8,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.53.2": {
+      "assigned_count": 7,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "16": {
+      "assigned_count": 10,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "3.1.9.2": {
+      "assigned_count": 6,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "11": {
+      "assigned_count": 20,
+      "positive_count": 1,
+      "risk": 0.05
+    },
+    "99": {
+      "assigned_count": 1,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "11.2": {
+      "assigned_count": 3,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "3.1.5": {
+      "assigned_count": 9,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "1.47.8": {
+      "assigned_count": 6,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "3.1.8.2": {
+      "assigned_count": 4,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "7": {
+      "assigned_count": 4,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "4.10": {
+      "assigned_count": 3,
+      "positive_count": 0,
+      "risk": 0.0
+    },
+    "19.1": {
+      "assigned_count": 1,
+      "positive_count": 0,
+      "risk": 0.0
+    }
+  },
+  "factor_mkb_links": {
+    "4.4": [
+      {
+        "value": "H90.3",
+        "count": 29,
+        "share": 0.204225
+      },
+      {
+        "value": "J34.2",
+        "count": 11,
+        "share": 0.077465
+      },
+      {
+        "value": "H52.1",
+        "count": 11,
+        "share": 0.077465
+      },
+      {
+        "value": "Z01.2",
+        "count": 7,
+        "share": 0.049296
+      },
+      {
+        "value": "H52.0",
+        "count": 6,
+        "share": 0.042254
+      },
+      {
+        "value": "I10",
+        "count": 6,
+        "share": 0.042254
+      },
+      {
+        "value": "M42.1",
+        "count": 6,
+        "share": 0.042254
+      },
+      {
+        "value": "I11.9",
+        "count": 5,
+        "share": 0.035211
+      },
+      {
+        "value": "Z00.8",
+        "count": 4,
+        "share": 0.028169
+      },
+      {
+        "value": "M54.4",
+        "count": 3,
+        "share": 0.021127
+      },
+      {
+        "value": "E78.0",
+        "count": 3,
+        "share": 0.021127
+      },
+      {
+        "value": "K02.9",
+        "count": 3,
+        "share": 0.021127
+      }
+    ],
+    "6.1": [
+      {
+        "value": "H52.1",
+        "count": 403,
+        "share": 0.243211
+      },
+      {
+        "value": "Z01.2",
+        "count": 135,
+        "share": 0.081473
+      },
+      {
+        "value": "K02.1",
+        "count": 82,
+        "share": 0.049487
+      },
+      {
+        "value": "H52.2",
+        "count": 78,
+        "share": 0.047073
+      },
+      {
+        "value": "I10",
+        "count": 76,
+        "share": 0.045866
+      },
+      {
+        "value": "M42.1",
+        "count": 66,
+        "share": 0.039831
+      },
+      {
+        "value": "I11.9",
+        "count": 52,
+        "share": 0.031382
+      },
+      {
+        "value": "H52.0",
+        "count": 40,
+        "share": 0.02414
+      },
+      {
+        "value": "E66",
+        "count": 35,
+        "share": 0.021123
+      },
+      {
+        "value": "H90.3",
+        "count": 35,
+        "share": 0.021123
+      },
+      {
+        "value": "J34.2",
+        "count": 33,
+        "share": 0.019916
+      },
+      {
+        "value": "Z00.8",
+        "count": 33,
+        "share": 0.019916
+      }
+    ],
+    "15": [
+      {
+        "value": "J34.2",
+        "count": 10,
+        "share": 0.153846
+      },
+      {
+        "value": "H90.3",
+        "count": 9,
+        "share": 0.138462
+      },
+      {
+        "value": "M42.1",
+        "count": 4,
+        "share": 0.061538
+      },
+      {
+        "value": "I10",
+        "count": 4,
+        "share": 0.061538
+      },
+      {
+        "value": "H52.0",
+        "count": 4,
+        "share": 0.061538
+      },
+      {
+        "value": "H52.1",
+        "count": 3,
+        "share": 0.046154
+      },
+      {
+        "value": "H90.7",
+        "count": 3,
+        "share": 0.046154
+      },
+      {
+        "value": "H90.8",
+        "count": 2,
+        "share": 0.030769
+      },
+      {
+        "value": "H52.2",
+        "count": 2,
+        "share": 0.030769
+      },
+      {
+        "value": "H66.1",
+        "count": 2,
+        "share": 0.030769
+      },
+      {
+        "value": "I11.9",
+        "count": 2,
+        "share": 0.030769
+      },
+      {
+        "value": "H53.0",
+        "count": 2,
+        "share": 0.030769
+      }
+    ],
+    "6.2": [
+      {
+        "value": "H90.3",
+        "count": 18,
+        "share": 0.098361
+      },
+      {
+        "value": "M42.1",
+        "count": 17,
+        "share": 0.092896
+      },
+      {
+        "value": "H52.1",
+        "count": 14,
+        "share": 0.076503
+      },
+      {
+        "value": "J34.2",
+        "count": 13,
+        "share": 0.071038
+      },
+      {
+        "value": "H52.2",
+        "count": 11,
+        "share": 0.060109
+      },
+      {
+        "value": "I10",
+        "count": 9,
+        "share": 0.04918
+      },
+      {
+        "value": "Z00.8",
+        "count": 6,
+        "share": 0.032787
+      },
+      {
+        "value": "H52.0",
+        "count": 5,
+        "share": 0.027322
+      },
+      {
+        "value": "K02.9",
+        "count": 5,
+        "share": 0.027322
+      },
+      {
+        "value": "I11.9",
+        "count": 5,
+        "share": 0.027322
+      },
+      {
+        "value": "H90.4",
+        "count": 4,
+        "share": 0.021858
+      },
+      {
+        "value": "Z72",
+        "count": 3,
+        "share": 0.016393
+      }
+    ],
+    "17": [
+      {
+        "value": "H52.1",
+        "count": 125,
+        "share": 0.246063
+      },
+      {
+        "value": "Z01.2",
+        "count": 70,
+        "share": 0.137795
+      },
+      {
+        "value": "H52.2",
+        "count": 28,
+        "share": 0.055118
+      },
+      {
+        "value": "I10",
+        "count": 26,
+        "share": 0.051181
+      },
+      {
+        "value": "H52.0",
+        "count": 23,
+        "share": 0.045276
+      },
+      {
+        "value": "I11.9",
+        "count": 19,
+        "share": 0.037402
+      },
+      {
+        "value": "J34.2",
+        "count": 16,
+        "share": 0.031496
+      },
+      {
+        "value": "H53.0",
+        "count": 16,
+        "share": 0.031496
+      },
+      {
+        "value": "K02.1",
+        "count": 14,
+        "share": 0.027559
+      },
+      {
+        "value": "K02.9",
+        "count": 11,
+        "share": 0.021654
+      },
+      {
+        "value": "M42.1",
+        "count": 9,
+        "share": 0.017717
+      },
+      {
+        "value": "E66",
+        "count": 9,
+        "share": 0.017717
+      }
+    ],
+    "12": [
+      {
+        "value": "H90.3",
+        "count": 16,
+        "share": 0.114286
+      },
+      {
+        "value": "Z01.2",
+        "count": 13,
+        "share": 0.092857
+      },
+      {
+        "value": "H52.1",
+        "count": 10,
+        "share": 0.071429
+      },
+      {
+        "value": "J34.2",
+        "count": 8,
+        "share": 0.057143
+      },
+      {
+        "value": "H53.0",
+        "count": 7,
+        "share": 0.05
+      },
+      {
+        "value": "K02.9",
+        "count": 6,
+        "share": 0.042857
+      },
+      {
+        "value": "I11.9",
+        "count": 6,
+        "share": 0.042857
+      },
+      {
+        "value": "Q11.1",
+        "count": 5,
+        "share": 0.035714
+      },
+      {
+        "value": "I10",
+        "count": 4,
+        "share": 0.028571
+      },
+      {
+        "value": "H52.4",
+        "count": 4,
+        "share": 0.028571
+      },
+      {
+        "value": "M42.1",
+        "count": 3,
+        "share": 0.021429
+      },
+      {
+        "value": "K02.1",
+        "count": 3,
+        "share": 0.021429
+      }
+    ],
+    "13": [
+      {
+        "value": "Z01.2",
+        "count": 17,
+        "share": 0.090909
+      },
+      {
+        "value": "J34.2",
+        "count": 16,
+        "share": 0.085561
+      },
+      {
+        "value": "H90.3",
+        "count": 15,
+        "share": 0.080214
+      },
+      {
+        "value": "H52.1",
+        "count": 13,
+        "share": 0.069519
+      },
+      {
+        "value": "K02.9",
+        "count": 9,
+        "share": 0.048128
+      },
+      {
+        "value": "Q11.1",
+        "count": 8,
+        "share": 0.042781
+      },
+      {
+        "value": "I11.9",
+        "count": 8,
+        "share": 0.042781
+      },
+      {
+        "value": "H53.0",
+        "count": 7,
+        "share": 0.037433
+      },
+      {
+        "value": "K02.1",
+        "count": 6,
+        "share": 0.032086
+      },
+      {
+        "value": "H52.4",
+        "count": 6,
+        "share": 0.032086
+      },
+      {
+        "value": "J45.0",
+        "count": 5,
+        "share": 0.026738
+      },
+      {
+        "value": "I10",
+        "count": 4,
+        "share": 0.02139
+      }
+    ],
+    "14": [
+      {
+        "value": "H52.1",
+        "count": 53,
+        "share": 0.271795
+      },
+      {
+        "value": "Z01.2",
+        "count": 14,
+        "share": 0.071795
+      },
+      {
+        "value": "H52.2",
+        "count": 13,
+        "share": 0.066667
+      },
+      {
+        "value": "I11.9",
+        "count": 10,
+        "share": 0.051282
+      },
+      {
+        "value": "H52.0",
+        "count": 9,
+        "share": 0.046154
+      },
+      {
+        "value": "I10",
+        "count": 9,
+        "share": 0.046154
+      },
+      {
+        "value": "J34.2",
+        "count": 6,
+        "share": 0.030769
+      },
+      {
+        "value": "Z00.8",
+        "count": 6,
+        "share": 0.030769
+      },
+      {
+        "value": "K02.1",
+        "count": 6,
+        "share": 0.030769
+      },
+      {
+        "value": "E66",
+        "count": 5,
+        "share": 0.025641
+      },
+      {
+        "value": "M42.1",
+        "count": 4,
+        "share": 0.020513
+      },
+      {
+        "value": "N72",
+        "count": 4,
+        "share": 0.020513
+      }
+    ],
+    "6": [
+      {
+        "value": "H52.1",
+        "count": 19,
+        "share": 0.197917
+      },
+      {
+        "value": "J34.2",
+        "count": 15,
+        "share": 0.15625
+      },
+      {
+        "value": "K02.9",
+        "count": 5,
+        "share": 0.052083
+      },
+      {
+        "value": "Z01.2",
+        "count": 5,
+        "share": 0.052083
+      },
+      {
+        "value": "I11.9",
+        "count": 4,
+        "share": 0.041667
+      },
+      {
+        "value": "H90.3",
+        "count": 4,
+        "share": 0.041667
+      },
+      {
+        "value": "H52.0",
+        "count": 3,
+        "share": 0.03125
+      },
+      {
+        "value": "M42.1",
+        "count": 2,
+        "share": 0.020833
+      },
+      {
+        "value": "H90.6",
+        "count": 2,
+        "share": 0.020833
+      },
+      {
+        "value": "H61.2",
+        "count": 2,
+        "share": 0.020833
+      },
+      {
+        "value": "I10",
+        "count": 2,
+        "share": 0.020833
+      },
+      {
+        "value": "D25",
+        "count": 2,
+        "share": 0.020833
+      }
+    ],
+    "5.1": [
+      {
+        "value": "K42.9",
+        "count": 22,
+        "share": 0.097345
+      },
+      {
+        "value": "H52.1",
+        "count": 20,
+        "share": 0.088496
+      },
+      {
+        "value": "I10",
+        "count": 17,
+        "share": 0.075221
+      },
+      {
+        "value": "Z01.2",
+        "count": 15,
+        "share": 0.066372
+      },
+      {
+        "value": "I11.9",
+        "count": 15,
+        "share": 0.066372
+      },
+      {
+        "value": "K40.9",
+        "count": 14,
+        "share": 0.061947
+      },
+      {
+        "value": "H52.0",
+        "count": 12,
+        "share": 0.053097
+      },
+      {
+        "value": "Z00.8",
+        "count": 6,
+        "share": 0.026549
+      },
+      {
+        "value": "H90.3",
+        "count": 5,
+        "share": 0.022124
+      },
+      {
+        "value": "I83.9",
+        "count": 5,
+        "share": 0.022124
+      },
+      {
+        "value": "E66",
+        "count": 4,
+        "share": 0.017699
+      },
+      {
+        "value": "H52.2",
+        "count": 4,
+        "share": 0.017699
+      }
+    ],
+    "1.1": [
+      {
+        "value": "J30.1",
+        "count": 3,
+        "share": 0.1875
+      },
+      {
+        "value": "J34.2",
+        "count": 2,
+        "share": 0.125
+      },
+      {
+        "value": "H52.1",
+        "count": 2,
+        "share": 0.125
+      },
+      {
+        "value": "N86",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "L70.9",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "C97",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "K02.9",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "D25",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "Z34",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "Z00.8",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "H52.2",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "J45.9",
+        "count": 1,
+        "share": 0.0625
+      }
+    ],
+    "1.3": [
+      {
+        "value": "J34.2",
+        "count": 2,
+        "share": 0.153846
+      },
+      {
+        "value": "D25",
+        "count": 2,
+        "share": 0.153846
+      },
+      {
+        "value": "H61.2",
+        "count": 2,
+        "share": 0.153846
+      },
+      {
+        "value": "N86",
+        "count": 1,
+        "share": 0.076923
+      },
+      {
+        "value": "H52.1",
+        "count": 1,
+        "share": 0.076923
+      },
+      {
+        "value": "K05.1",
+        "count": 1,
+        "share": 0.076923
+      },
+      {
+        "value": "N76.0",
+        "count": 1,
+        "share": 0.076923
+      },
+      {
+        "value": "Z34.8",
+        "count": 1,
+        "share": 0.076923
+      },
+      {
+        "value": "Z00.8",
+        "count": 1,
+        "share": 0.076923
+      },
+      {
+        "value": "H52.4",
+        "count": 1,
+        "share": 0.076923
+      }
+    ],
+    "1.30.1": [
+      {
+        "value": "N86",
+        "count": 1,
+        "share": 0.5
+      },
+      {
+        "value": "Z00.8",
+        "count": 1,
+        "share": 0.5
+      }
+    ],
+    "1.36.1": [
+      {
+        "value": "H52.1",
+        "count": 5,
+        "share": 0.178571
+      },
+      {
+        "value": "J45.9",
+        "count": 3,
+        "share": 0.107143
+      },
+      {
+        "value": "J34.2",
+        "count": 2,
+        "share": 0.071429
+      },
+      {
+        "value": "Z01.2",
+        "count": 2,
+        "share": 0.071429
+      },
+      {
+        "value": "J45.0",
+        "count": 2,
+        "share": 0.071429
+      },
+      {
+        "value": "Z00.8",
+        "count": 2,
+        "share": 0.071429
+      },
+      {
+        "value": "N86",
+        "count": 1,
+        "share": 0.035714
+      },
+      {
+        "value": "L70.9",
+        "count": 1,
+        "share": 0.035714
+      },
+      {
+        "value": "C97",
+        "count": 1,
+        "share": 0.035714
+      },
+      {
+        "value": "K02.9",
+        "count": 1,
+        "share": 0.035714
+      },
+      {
+        "value": "Z34.9",
+        "count": 1,
+        "share": 0.035714
+      },
+      {
+        "value": "G40.0",
+        "count": 1,
+        "share": 0.035714
+      }
+    ],
+    "1.36.2": [
+      {
+        "value": "J45.9",
+        "count": 3,
+        "share": 0.214286
+      },
+      {
+        "value": "H52.1",
+        "count": 2,
+        "share": 0.142857
+      },
+      {
+        "value": "Z00.8",
+        "count": 2,
+        "share": 0.142857
+      },
+      {
+        "value": "N86",
+        "count": 1,
+        "share": 0.071429
+      },
+      {
+        "value": "Z01.2",
+        "count": 1,
+        "share": 0.071429
+      },
+      {
+        "value": "I11.9",
+        "count": 1,
+        "share": 0.071429
+      },
+      {
+        "value": "Z34.9",
+        "count": 1,
+        "share": 0.071429
+      },
+      {
+        "value": "J45.0",
+        "count": 1,
+        "share": 0.071429
+      },
+      {
+        "value": "D18.0",
+        "count": 1,
+        "share": 0.071429
+      },
+      {
+        "value": "H52.2",
+        "count": 1,
+        "share": 0.071429
+      }
+    ],
+    "1.37.1": [
+      {
+        "value": "Z01.2",
+        "count": 5,
+        "share": 0.102041
+      },
+      {
+        "value": "H52.1",
+        "count": 5,
+        "share": 0.102041
+      },
+      {
+        "value": "J45.9",
+        "count": 3,
+        "share": 0.061224
+      },
+      {
+        "value": "Z00.8",
+        "count": 3,
+        "share": 0.061224
+      },
+      {
+        "value": "J45.0",
+        "count": 2,
+        "share": 0.040816
+      },
+      {
+        "value": "H52.2",
+        "count": 2,
+        "share": 0.040816
+      },
+      {
+        "value": "H61.2",
+        "count": 2,
+        "share": 0.040816
+      },
+      {
+        "value": "N86",
+        "count": 1,
+        "share": 0.020408
+      },
+      {
+        "value": "I83.9",
+        "count": 1,
+        "share": 0.020408
+      },
+      {
+        "value": "D26.1",
+        "count": 1,
+        "share": 0.020408
+      },
+      {
+        "value": "I11.9",
+        "count": 1,
+        "share": 0.020408
+      },
+      {
+        "value": "Z34.9",
+        "count": 1,
+        "share": 0.020408
+      }
+    ],
+    "1.50": [
+      {
+        "value": "J34.2",
+        "count": 4,
+        "share": 0.166667
+      },
+      {
+        "value": "H52.1",
+        "count": 3,
+        "share": 0.125
+      },
+      {
+        "value": "J30.1",
+        "count": 3,
+        "share": 0.125
+      },
+      {
+        "value": "D25",
+        "count": 2,
+        "share": 0.083333
+      },
+      {
+        "value": "N86",
+        "count": 1,
+        "share": 0.041667
+      },
+      {
+        "value": "L70.9",
+        "count": 1,
+        "share": 0.041667
+      },
+      {
+        "value": "C97",
+        "count": 1,
+        "share": 0.041667
+      },
+      {
+        "value": "K02.9",
+        "count": 1,
+        "share": 0.041667
+      },
+      {
+        "value": "Z34",
+        "count": 1,
+        "share": 0.041667
+      },
+      {
+        "value": "Z01.2",
+        "count": 1,
+        "share": 0.041667
+      },
+      {
+        "value": "J45.9",
+        "count": 1,
+        "share": 0.041667
+      },
+      {
+        "value": "J30",
+        "count": 1,
+        "share": 0.041667
+      }
+    ],
+    "18.1": [
+      {
+        "value": "J34.2",
+        "count": 22,
+        "share": 0.171875
+      },
+      {
+        "value": "I11.9",
+        "count": 20,
+        "share": 0.15625
+      },
+      {
+        "value": "H52.0",
+        "count": 15,
+        "share": 0.117188
+      },
+      {
+        "value": "H90.3",
+        "count": 12,
+        "share": 0.09375
+      },
+      {
+        "value": "H52.4",
+        "count": 8,
+        "share": 0.0625
+      },
+      {
+        "value": "M42.1",
+        "count": 6,
+        "share": 0.046875
+      },
+      {
+        "value": "H90.4",
+        "count": 6,
+        "share": 0.046875
+      },
+      {
+        "value": "Z01.2",
+        "count": 4,
+        "share": 0.03125
+      },
+      {
+        "value": "H52.1",
+        "count": 4,
+        "share": 0.03125
+      },
+      {
+        "value": "G93.8",
+        "count": 3,
+        "share": 0.023438
+      },
+      {
+        "value": "K02.9",
+        "count": 3,
+        "share": 0.023438
+      },
+      {
+        "value": "I10",
+        "count": 2,
+        "share": 0.015625
+      }
+    ],
+    "1.15": [
+      {
+        "value": "I83.9",
+        "count": 2,
+        "share": 0.222222
+      },
+      {
+        "value": "Z00.8",
+        "count": 2,
+        "share": 0.222222
+      },
+      {
+        "value": "D26.1",
+        "count": 1,
+        "share": 0.111111
+      },
+      {
+        "value": "H26.8",
+        "count": 1,
+        "share": 0.111111
+      },
+      {
+        "value": "D64",
+        "count": 1,
+        "share": 0.111111
+      },
+      {
+        "value": "N76.0",
+        "count": 1,
+        "share": 0.111111
+      },
+      {
+        "value": "Z34.8",
+        "count": 1,
+        "share": 0.111111
+      }
+    ],
+    "1.24": [
+      {
+        "value": "Z01.2",
+        "count": 4,
+        "share": 0.210526
+      },
+      {
+        "value": "H52.1",
+        "count": 2,
+        "share": 0.105263
+      },
+      {
+        "value": "H52.2",
+        "count": 2,
+        "share": 0.105263
+      },
+      {
+        "value": "I83.9",
+        "count": 1,
+        "share": 0.052632
+      },
+      {
+        "value": "D26.1",
+        "count": 1,
+        "share": 0.052632
+      },
+      {
+        "value": "D25.1",
+        "count": 1,
+        "share": 0.052632
+      },
+      {
+        "value": "L23.8",
+        "count": 1,
+        "share": 0.052632
+      },
+      {
+        "value": "M17.9",
+        "count": 1,
+        "share": 0.052632
+      },
+      {
+        "value": "N76.0",
+        "count": 1,
+        "share": 0.052632
+      },
+      {
+        "value": "I10",
+        "count": 1,
+        "share": 0.052632
+      },
+      {
+        "value": "B36.0",
+        "count": 1,
+        "share": 0.052632
+      },
+      {
+        "value": "I69.3",
+        "count": 1,
+        "share": 0.052632
+      }
+    ],
+    "1.19.1": [
+      {
+        "value": "J34.2",
+        "count": 2,
+        "share": 0.333333
+      },
+      {
+        "value": "L70.9",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "C97",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "K02.9",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Z00.8",
+        "count": 1,
+        "share": 0.166667
+      }
+    ],
+    "1.20": [
+      {
+        "value": "J34.2",
+        "count": 2,
+        "share": 0.4
+      },
+      {
+        "value": "L70.9",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "C97",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "K02.9",
+        "count": 1,
+        "share": 0.2
+      }
+    ],
+    "1.8.1": [
+      {
+        "value": "J34.2",
+        "count": 2,
+        "share": 0.4
+      },
+      {
+        "value": "L70.9",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "C97",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "K02.9",
+        "count": 1,
+        "share": 0.2
+      }
+    ],
+    "1.25": [
+      {
+        "value": "L20",
+        "count": 2,
+        "share": 0.2
+      },
+      {
+        "value": "J35.0",
+        "count": 1,
+        "share": 0.1
+      },
+      {
+        "value": "M42.1",
+        "count": 1,
+        "share": 0.1
+      },
+      {
+        "value": "H52.0",
+        "count": 1,
+        "share": 0.1
+      },
+      {
+        "value": "D25",
+        "count": 1,
+        "share": 0.1
+      },
+      {
+        "value": "L50",
+        "count": 1,
+        "share": 0.1
+      },
+      {
+        "value": "I11.9",
+        "count": 1,
+        "share": 0.1
+      },
+      {
+        "value": "N86",
+        "count": 1,
+        "share": 0.1
+      },
+      {
+        "value": "H52.1",
+        "count": 1,
+        "share": 0.1
+      }
+    ],
+    "3.1.8.3": [
+      {
+        "value": "J35.0",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "M42.1",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "H52.0",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "D25",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "L50",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "I11.9",
+        "count": 1,
+        "share": 0.166667
+      }
+    ],
+    "1.17": [
+      {
+        "value": "D25",
+        "count": 1,
+        "share": 0.5
+      },
+      {
+        "value": "Z34",
+        "count": 1,
+        "share": 0.5
+      }
+    ],
+    "1.36": [
+      {
+        "value": "J45.0",
+        "count": 2,
+        "share": 0.125
+      },
+      {
+        "value": "H52.1",
+        "count": 2,
+        "share": 0.125
+      },
+      {
+        "value": "Z00.8",
+        "count": 2,
+        "share": 0.125
+      },
+      {
+        "value": "D25",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "Z34",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "N76.0",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "Z34.8",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "J45.9",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "N72",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "D18.0",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "Z01.2",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "J45",
+        "count": 1,
+        "share": 0.0625
+      }
+    ],
+    "1.39": [
+      {
+        "value": "J30.1",
+        "count": 2,
+        "share": 0.4
+      },
+      {
+        "value": "D25",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "Z34",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "H52.1",
+        "count": 1,
+        "share": 0.2
+      }
+    ],
+    "3.1.1": [
+      {
+        "value": "J34.2",
+        "count": 2,
+        "share": 0.25
+      },
+      {
+        "value": "D25",
+        "count": 1,
+        "share": 0.125
+      },
+      {
+        "value": "Z34",
+        "count": 1,
+        "share": 0.125
+      },
+      {
+        "value": "L23",
+        "count": 1,
+        "share": 0.125
+      },
+      {
+        "value": "K02.9",
+        "count": 1,
+        "share": 0.125
+      },
+      {
+        "value": "I11.9",
+        "count": 1,
+        "share": 0.125
+      },
+      {
+        "value": "H52.0",
+        "count": 1,
+        "share": 0.125
+      }
+    ],
+    "4.7": [
+      {
+        "value": "D25",
+        "count": 1,
+        "share": 0.5
+      },
+      {
+        "value": "Z34",
+        "count": 1,
+        "share": 0.5
+      }
+    ],
+    "4.8": [
+      {
+        "value": "K02.9",
+        "count": 2,
+        "share": 0.117647
+      },
+      {
+        "value": "H90.3",
+        "count": 2,
+        "share": 0.117647
+      },
+      {
+        "value": "J34.2",
+        "count": 2,
+        "share": 0.117647
+      },
+      {
+        "value": "D25",
+        "count": 1,
+        "share": 0.058824
+      },
+      {
+        "value": "Z34",
+        "count": 1,
+        "share": 0.058824
+      },
+      {
+        "value": "Z34.9",
+        "count": 1,
+        "share": 0.058824
+      },
+      {
+        "value": "I87.8",
+        "count": 1,
+        "share": 0.058824
+      },
+      {
+        "value": "I11.0",
+        "count": 1,
+        "share": 0.058824
+      },
+      {
+        "value": "Z96.1",
+        "count": 1,
+        "share": 0.058824
+      },
+      {
+        "value": "L23",
+        "count": 1,
+        "share": 0.058824
+      },
+      {
+        "value": "I11.9",
+        "count": 1,
+        "share": 0.058824
+      },
+      {
+        "value": "H52.0",
+        "count": 1,
+        "share": 0.058824
+      }
+    ],
+    "4.9": [
+      {
+        "value": "D25",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Z34",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "M54.2",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "N76.0",
+        "count": 1,
+        "share": 0.25
+      }
+    ],
+    "8": [
+      {
+        "value": "H90.8",
+        "count": 2,
+        "share": 0.5
+      },
+      {
+        "value": "H52.1",
+        "count": 2,
+        "share": 0.5
+      }
+    ],
+    "4.3.1": [
+      {
+        "value": "J34.2",
+        "count": 6,
+        "share": 0.2
+      },
+      {
+        "value": "H52.0",
+        "count": 2,
+        "share": 0.066667
+      },
+      {
+        "value": "Z01.2",
+        "count": 2,
+        "share": 0.066667
+      },
+      {
+        "value": "I11.9",
+        "count": 2,
+        "share": 0.066667
+      },
+      {
+        "value": "H53.0",
+        "count": 2,
+        "share": 0.066667
+      },
+      {
+        "value": "M19",
+        "count": 1,
+        "share": 0.033333
+      },
+      {
+        "value": "G58.8",
+        "count": 1,
+        "share": 0.033333
+      },
+      {
+        "value": "I25.1",
+        "count": 1,
+        "share": 0.033333
+      },
+      {
+        "value": "G93.8",
+        "count": 1,
+        "share": 0.033333
+      },
+      {
+        "value": "G40.0",
+        "count": 1,
+        "share": 0.033333
+      },
+      {
+        "value": "H52.1",
+        "count": 1,
+        "share": 0.033333
+      },
+      {
+        "value": "L40.5",
+        "count": 1,
+        "share": 0.033333
+      }
+    ],
+    "1.34.1": [
+      {
+        "value": "Z00.8",
+        "count": 2,
+        "share": 0.166667
+      },
+      {
+        "value": "H26.8",
+        "count": 1,
+        "share": 0.083333
+      },
+      {
+        "value": "I83.9",
+        "count": 1,
+        "share": 0.083333
+      },
+      {
+        "value": "D64",
+        "count": 1,
+        "share": 0.083333
+      },
+      {
+        "value": "D50",
+        "count": 1,
+        "share": 0.083333
+      },
+      {
+        "value": "Z00",
+        "count": 1,
+        "share": 0.083333
+      },
+      {
+        "value": "H52.1",
+        "count": 1,
+        "share": 0.083333
+      },
+      {
+        "value": "D25.1",
+        "count": 1,
+        "share": 0.083333
+      },
+      {
+        "value": "L23.8",
+        "count": 1,
+        "share": 0.083333
+      },
+      {
+        "value": "N76.0",
+        "count": 1,
+        "share": 0.083333
+      },
+      {
+        "value": "Z34.8",
+        "count": 1,
+        "share": 0.083333
+      }
+    ],
+    "11.3": [
+      {
+        "value": "Z01.2",
+        "count": 1,
+        "share": 0.5
+      },
+      {
+        "value": "H17.8",
+        "count": 1,
+        "share": 0.5
+      }
+    ],
+    "11.1": [
+      {
+        "value": "J35.0",
+        "count": 2,
+        "share": 0.333333
+      },
+      {
+        "value": "K02.9",
+        "count": 2,
+        "share": 0.333333
+      },
+      {
+        "value": "Q23.8",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "H52.1",
+        "count": 1,
+        "share": 0.166667
+      }
+    ],
+    "22": [
+      {
+        "value": "H90.6",
+        "count": 2,
+        "share": 0.333333
+      },
+      {
+        "value": "H90.3",
+        "count": 2,
+        "share": 0.333333
+      },
+      {
+        "value": "H52.4",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "I10",
+        "count": 1,
+        "share": 0.166667
+      }
+    ],
+    "1.27": [
+      {
+        "value": "Z00",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "Z01.2",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "M42.1",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "H52.1",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "D64",
+        "count": 1,
+        "share": 0.2
+      }
+    ],
+    "4.3.2": [
+      {
+        "value": "J34.2",
+        "count": 4,
+        "share": 0.173913
+      },
+      {
+        "value": "H90.3",
+        "count": 3,
+        "share": 0.130435
+      },
+      {
+        "value": "I11.9",
+        "count": 2,
+        "share": 0.086957
+      },
+      {
+        "value": "Z01.2",
+        "count": 1,
+        "share": 0.043478
+      },
+      {
+        "value": "N83.2",
+        "count": 1,
+        "share": 0.043478
+      },
+      {
+        "value": "Z34.9",
+        "count": 1,
+        "share": 0.043478
+      },
+      {
+        "value": "K02.9",
+        "count": 1,
+        "share": 0.043478
+      },
+      {
+        "value": "H52.0",
+        "count": 1,
+        "share": 0.043478
+      },
+      {
+        "value": "L40.5",
+        "count": 1,
+        "share": 0.043478
+      },
+      {
+        "value": "E66.9",
+        "count": 1,
+        "share": 0.043478
+      },
+      {
+        "value": "H52.4",
+        "count": 1,
+        "share": 0.043478
+      },
+      {
+        "value": "H53.8",
+        "count": 1,
+        "share": 0.043478
+      }
+    ],
+    "2.4.3": [
+      {
+        "value": "H52.1",
+        "count": 10,
+        "share": 0.208333
+      },
+      {
+        "value": "O26.8",
+        "count": 6,
+        "share": 0.125
+      },
+      {
+        "value": "K02.9",
+        "count": 5,
+        "share": 0.104167
+      },
+      {
+        "value": "J30",
+        "count": 3,
+        "share": 0.0625
+      },
+      {
+        "value": "D25",
+        "count": 3,
+        "share": 0.0625
+      },
+      {
+        "value": "Z01.2",
+        "count": 2,
+        "share": 0.041667
+      },
+      {
+        "value": "J34.2",
+        "count": 2,
+        "share": 0.041667
+      },
+      {
+        "value": "E66.9",
+        "count": 2,
+        "share": 0.041667
+      },
+      {
+        "value": "N92.6",
+        "count": 1,
+        "share": 0.020833
+      },
+      {
+        "value": "Z32.1",
+        "count": 1,
+        "share": 0.020833
+      },
+      {
+        "value": "D16.4",
+        "count": 1,
+        "share": 0.020833
+      },
+      {
+        "value": "K07.2",
+        "count": 1,
+        "share": 0.020833
+      }
+    ],
+    "4.1": [
+      {
+        "value": "H90.3",
+        "count": 2,
+        "share": 0.125
+      },
+      {
+        "value": "M17.0",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "J34.2",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "H40.1",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "G93.8",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "Q85",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "H52.2",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "I11.9",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "K29.9",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "H53.0",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "H52.1",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "N86",
+        "count": 1,
+        "share": 0.0625
+      }
+    ],
+    "4.2.1": [
+      {
+        "value": "M17.0",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "J34.2",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "H40.1",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "G93.8",
+        "count": 1,
+        "share": 0.25
+      }
+    ],
+    "4.2.2": [
+      {
+        "value": "M17.0",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "J34.2",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "H40.1",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "G93.8",
+        "count": 1,
+        "share": 0.25
+      }
+    ],
+    "4.2.3": [
+      {
+        "value": "M17.0",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "J34.2",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "H40.1",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "G93.8",
+        "count": 1,
+        "share": 0.25
+      }
+    ],
+    "4.2.4": [
+      {
+        "value": "M17.0",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "J34.2",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "H40.1",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "G93.8",
+        "count": 1,
+        "share": 0.25
+      }
+    ],
+    "9": [
+      {
+        "value": "J34.2",
+        "count": 10,
+        "share": 0.120482
+      },
+      {
+        "value": "H90.3",
+        "count": 9,
+        "share": 0.108434
+      },
+      {
+        "value": "H52.1",
+        "count": 7,
+        "share": 0.084337
+      },
+      {
+        "value": "K02.9",
+        "count": 6,
+        "share": 0.072289
+      },
+      {
+        "value": "K02.1",
+        "count": 4,
+        "share": 0.048193
+      },
+      {
+        "value": "H90.4",
+        "count": 4,
+        "share": 0.048193
+      },
+      {
+        "value": "H52.4",
+        "count": 3,
+        "share": 0.036145
+      },
+      {
+        "value": "H90.6",
+        "count": 2,
+        "share": 0.024096
+      },
+      {
+        "value": "Q11.1",
+        "count": 2,
+        "share": 0.024096
+      },
+      {
+        "value": "G40.9",
+        "count": 2,
+        "share": 0.024096
+      },
+      {
+        "value": "I11.9",
+        "count": 2,
+        "share": 0.024096
+      },
+      {
+        "value": "G96.8",
+        "count": 1,
+        "share": 0.012048
+      }
+    ],
+    "18.2": [
+      {
+        "value": "I11.9",
+        "count": 11,
+        "share": 0.1375
+      },
+      {
+        "value": "H52.4",
+        "count": 11,
+        "share": 0.1375
+      },
+      {
+        "value": "J34.2",
+        "count": 10,
+        "share": 0.125
+      },
+      {
+        "value": "H90.3",
+        "count": 10,
+        "share": 0.125
+      },
+      {
+        "value": "H52.0",
+        "count": 8,
+        "share": 0.1
+      },
+      {
+        "value": "H90.4",
+        "count": 6,
+        "share": 0.075
+      },
+      {
+        "value": "H90.6",
+        "count": 4,
+        "share": 0.05
+      },
+      {
+        "value": "Z01.2",
+        "count": 3,
+        "share": 0.0375
+      },
+      {
+        "value": "M42.1",
+        "count": 3,
+        "share": 0.0375
+      },
+      {
+        "value": "J31.0",
+        "count": 2,
+        "share": 0.025
+      },
+      {
+        "value": "H90.7",
+        "count": 2,
+        "share": 0.025
+      },
+      {
+        "value": "G93.8",
+        "count": 1,
+        "share": 0.0125
+      }
+    ],
+    "1.14.2": [
+      {
+        "value": "J34.2",
+        "count": 3,
+        "share": 0.230769
+      },
+      {
+        "value": "D25",
+        "count": 2,
+        "share": 0.153846
+      },
+      {
+        "value": "H61.2",
+        "count": 2,
+        "share": 0.153846
+      },
+      {
+        "value": "H52.1",
+        "count": 1,
+        "share": 0.076923
+      },
+      {
+        "value": "K05.1",
+        "count": 1,
+        "share": 0.076923
+      },
+      {
+        "value": "H17.8",
+        "count": 1,
+        "share": 0.076923
+      },
+      {
+        "value": "L30",
+        "count": 1,
+        "share": 0.076923
+      },
+      {
+        "value": "Z00.8",
+        "count": 1,
+        "share": 0.076923
+      },
+      {
+        "value": "H52.4",
+        "count": 1,
+        "share": 0.076923
+      }
+    ],
+    "1.5": [
+      {
+        "value": "G40.0",
+        "count": 1,
+        "share": 0.333333
+      },
+      {
+        "value": "Z01.2",
+        "count": 1,
+        "share": 0.333333
+      },
+      {
+        "value": "H52.1",
+        "count": 1,
+        "share": 0.333333
+      }
+    ],
+    "2.4.2": [
+      {
+        "value": "H52.1",
+        "count": 4,
+        "share": 0.166667
+      },
+      {
+        "value": "O26.8",
+        "count": 2,
+        "share": 0.083333
+      },
+      {
+        "value": "E66.9",
+        "count": 2,
+        "share": 0.083333
+      },
+      {
+        "value": "D25",
+        "count": 2,
+        "share": 0.083333
+      },
+      {
+        "value": "K02.9",
+        "count": 2,
+        "share": 0.083333
+      },
+      {
+        "value": "Z32.1",
+        "count": 1,
+        "share": 0.041667
+      },
+      {
+        "value": "K07.2",
+        "count": 1,
+        "share": 0.041667
+      },
+      {
+        "value": "L70",
+        "count": 1,
+        "share": 0.041667
+      },
+      {
+        "value": "J30",
+        "count": 1,
+        "share": 0.041667
+      },
+      {
+        "value": "L80",
+        "count": 1,
+        "share": 0.041667
+      },
+      {
+        "value": "J32.0",
+        "count": 1,
+        "share": 0.041667
+      },
+      {
+        "value": "H52.4",
+        "count": 1,
+        "share": 0.041667
+      }
+    ],
+    "1.45.1": [
+      {
+        "value": "H61.2",
+        "count": 2,
+        "share": 0.285714
+      },
+      {
+        "value": "J34.2",
+        "count": 1,
+        "share": 0.142857
+      },
+      {
+        "value": "H17.8",
+        "count": 1,
+        "share": 0.142857
+      },
+      {
+        "value": "L30",
+        "count": 1,
+        "share": 0.142857
+      },
+      {
+        "value": "D25",
+        "count": 1,
+        "share": 0.142857
+      },
+      {
+        "value": "H52.4",
+        "count": 1,
+        "share": 0.142857
+      }
+    ],
+    "3.1.7": [
+      {
+        "value": "M54.5",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "E78.0",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "H52.1",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "J30.1",
+        "count": 1,
+        "share": 0.25
+      }
+    ],
+    "1.14.1": [
+      {
+        "value": "N76.0",
+        "count": 1,
+        "share": 0.5
+      },
+      {
+        "value": "Z34.8",
+        "count": 1,
+        "share": 0.5
+      }
+    ],
+    "1.43.2": [
+      {
+        "value": "N76.0",
+        "count": 1,
+        "share": 0.5
+      },
+      {
+        "value": "Z34.8",
+        "count": 1,
+        "share": 0.5
+      }
+    ],
+    "3.1.2": [
+      {
+        "value": "J34.2",
+        "count": 2,
+        "share": 0.333333
+      },
+      {
+        "value": "L23",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "K02.9",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "I11.9",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "H52.0",
+        "count": 1,
+        "share": 0.166667
+      }
+    ],
+    "1.38": [
+      {
+        "value": "Z01.2",
+        "count": 1,
+        "share": 0.5
+      },
+      {
+        "value": "M17.9",
+        "count": 1,
+        "share": 0.5
+      }
+    ],
+    "1.29.1": [
+      {
+        "value": "Z00.8",
+        "count": 1,
+        "share": 1.0
+      }
+    ],
+    "1.29.2": [
+      {
+        "value": "Z00.8",
+        "count": 1,
+        "share": 1.0
+      }
+    ],
+    "1.29.4": [
+      {
+        "value": "Z00.8",
+        "count": 1,
+        "share": 1.0
+      }
+    ],
+    "1.30": [
+      {
+        "value": "Z00.8",
+        "count": 1,
+        "share": 1.0
+      }
+    ],
+    "1.40.1": [
+      {
+        "value": "Z00.8",
+        "count": 1,
+        "share": 1.0
+      }
+    ],
+    "1.45.3": [
+      {
+        "value": "Z00.8",
+        "count": 1,
+        "share": 1.0
+      }
+    ],
+    "1.49.4": [
+      {
+        "value": "Z00.8",
+        "count": 1,
+        "share": 1.0
+      }
+    ],
+    "1.8.1.1": [
+      {
+        "value": "Z00.8",
+        "count": 1,
+        "share": 1.0
+      }
+    ],
+    "1.48": [
+      {
+        "value": "H52.0",
+        "count": 1,
+        "share": 0.333333
+      },
+      {
+        "value": "N85.0",
+        "count": 1,
+        "share": 0.333333
+      },
+      {
+        "value": "I11.9",
+        "count": 1,
+        "share": 0.333333
+      }
+    ],
+    "1.34": [
+      {
+        "value": "B36.0",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "Z01.2",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "I69.3",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "H52.2",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "I20.8",
+        "count": 1,
+        "share": 0.2
+      }
+    ],
+    "1.2": [
+      {
+        "value": "Z01.2",
+        "count": 1,
+        "share": 0.5
+      },
+      {
+        "value": "J45.0",
+        "count": 1,
+        "share": 0.5
+      }
+    ]
+  },
+  "factor_specialist_links": {
+    "4.4": [
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 31,
+        "share": 0.213793
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 31,
+        "share": 0.213793
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 23,
+        "share": 0.158621
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 17,
+        "share": 0.117241
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 17,
+        "share": 0.117241
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 12,
+        "share": 0.082759
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 6,
+        "share": 0.041379
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 5,
+        "share": 0.034483
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 3,
+        "share": 0.02069
+      }
+    ],
+    "6.1": [
+      {
+        "value": "Врач Офтальмолог",
+        "count": 568,
+        "share": 0.335697
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 440,
+        "share": 0.260047
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 254,
+        "share": 0.150118
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 145,
+        "share": 0.085697
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 109,
+        "share": 0.064421
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 66,
+        "share": 0.039007
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 53,
+        "share": 0.031324
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 32,
+        "share": 0.018913
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 24,
+        "share": 0.014184
+      },
+      {
+        "value": "Врач Психиатр-Нарколог",
+        "count": 1,
+        "share": 0.000591
+      }
+    ],
+    "15": [
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 16,
+        "share": 0.242424
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 13,
+        "share": 0.19697
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 12,
+        "share": 0.181818
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 10,
+        "share": 0.151515
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 8,
+        "share": 0.121212
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 3,
+        "share": 0.045455
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 2,
+        "share": 0.030303
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 1,
+        "share": 0.015152
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.015152
+      }
+    ],
+    "6.2": [
+      {
+        "value": "Врач Офтальмолог",
+        "count": 43,
+        "share": 0.223958
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 42,
+        "share": 0.21875
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 30,
+        "share": 0.15625
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 26,
+        "share": 0.135417
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 17,
+        "share": 0.088542
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 14,
+        "share": 0.072917
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 10,
+        "share": 0.052083
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 6,
+        "share": 0.03125
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 4,
+        "share": 0.020833
+      }
+    ],
+    "17": [
+      {
+        "value": "Врач Офтальмолог",
+        "count": 192,
+        "share": 0.371373
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 132,
+        "share": 0.255319
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 98,
+        "share": 0.189555
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 32,
+        "share": 0.061896
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 21,
+        "share": 0.040619
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 16,
+        "share": 0.030948
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 12,
+        "share": 0.023211
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 7,
+        "share": 0.01354
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 6,
+        "share": 0.011605
+      },
+      {
+        "value": "Врач Психиатр-Нарколог",
+        "count": 1,
+        "share": 0.001934
+      }
+    ],
+    "12": [
+      {
+        "value": "Врач Офтальмолог",
+        "count": 38,
+        "share": 0.263889
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 29,
+        "share": 0.201389
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 25,
+        "share": 0.173611
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 18,
+        "share": 0.125
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 14,
+        "share": 0.097222
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 10,
+        "share": 0.069444
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 6,
+        "share": 0.041667
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 3,
+        "share": 0.020833
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 0.006944
+      }
+    ],
+    "13": [
+      {
+        "value": "Врач Терапевт",
+        "count": 51,
+        "share": 0.256281
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 43,
+        "share": 0.21608
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 35,
+        "share": 0.175879
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 26,
+        "share": 0.130653
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 12,
+        "share": 0.060302
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 11,
+        "share": 0.055276
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 10,
+        "share": 0.050251
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 6,
+        "share": 0.030151
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 5,
+        "share": 0.025126
+      }
+    ],
+    "14": [
+      {
+        "value": "Врач Офтальмолог",
+        "count": 75,
+        "share": 0.382653
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 50,
+        "share": 0.255102
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 22,
+        "share": 0.112245
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 16,
+        "share": 0.081633
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 15,
+        "share": 0.076531
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 9,
+        "share": 0.045918
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 6,
+        "share": 0.030612
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 3,
+        "share": 0.015306
+      }
+    ],
+    "6": [
+      {
+        "value": "Врач Офтальмолог",
+        "count": 25,
+        "share": 0.257732
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 17,
+        "share": 0.175258
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 16,
+        "share": 0.164948
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 14,
+        "share": 0.14433
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 12,
+        "share": 0.123711
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 6,
+        "share": 0.061856
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 3,
+        "share": 0.030928
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 2,
+        "share": 0.020619
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 2,
+        "share": 0.020619
+      }
+    ],
+    "5.1": [
+      {
+        "value": "Врач Терапевт",
+        "count": 73,
+        "share": 0.317391
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 53,
+        "share": 0.230435
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 39,
+        "share": 0.169565
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 21,
+        "share": 0.091304
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 19,
+        "share": 0.082609
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 9,
+        "share": 0.03913
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 9,
+        "share": 0.03913
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 5,
+        "share": 0.021739
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 2,
+        "share": 0.008696
+      }
+    ],
+    "1.1": [
+      {
+        "value": "Врач Терапевт",
+        "count": 4,
+        "share": 0.235294
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 3,
+        "share": 0.176471
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 2,
+        "share": 0.117647
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 2,
+        "share": 0.117647
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 2,
+        "share": 0.117647
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 2,
+        "share": 0.117647
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 1,
+        "share": 0.058824
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.058824
+      }
+    ],
+    "1.3": [
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 4,
+        "share": 0.285714
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 2,
+        "share": 0.142857
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 2,
+        "share": 0.142857
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 2,
+        "share": 0.142857
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 2,
+        "share": 0.142857
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.071429
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 0.071429
+      }
+    ],
+    "1.30.1": [
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 1,
+        "share": 0.5
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 0.5
+      }
+    ],
+    "1.36.1": [
+      {
+        "value": "Врач Терапевт",
+        "count": 12,
+        "share": 0.387097
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 6,
+        "share": 0.193548
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 3,
+        "share": 0.096774
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 3,
+        "share": 0.096774
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 3,
+        "share": 0.096774
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 1,
+        "share": 0.032258
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 1,
+        "share": 0.032258
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 1,
+        "share": 0.032258
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 1,
+        "share": 0.032258
+      }
+    ],
+    "1.36.2": [
+      {
+        "value": "Врач Терапевт",
+        "count": 7,
+        "share": 0.466667
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 3,
+        "share": 0.2
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 2,
+        "share": 0.133333
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 2,
+        "share": 0.133333
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.066667
+      }
+    ],
+    "1.37.1": [
+      {
+        "value": "Врач Терапевт",
+        "count": 19,
+        "share": 0.358491
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 10,
+        "share": 0.188679
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 8,
+        "share": 0.150943
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 6,
+        "share": 0.113208
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 5,
+        "share": 0.09434
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 2,
+        "share": 0.037736
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 1,
+        "share": 0.018868
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 1,
+        "share": 0.018868
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 1,
+        "share": 0.018868
+      }
+    ],
+    "1.50": [
+      {
+        "value": "Врач Терапевт",
+        "count": 6,
+        "share": 0.222222
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 5,
+        "share": 0.185185
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 3,
+        "share": 0.111111
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 3,
+        "share": 0.111111
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 3,
+        "share": 0.111111
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 3,
+        "share": 0.111111
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 3,
+        "share": 0.111111
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 1,
+        "share": 0.037037
+      }
+    ],
+    "18.1": [
+      {
+        "value": "Врач Терапевт",
+        "count": 31,
+        "share": 0.234848
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 29,
+        "share": 0.219697
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 22,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 22,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 14,
+        "share": 0.106061
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 7,
+        "share": 0.05303
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 4,
+        "share": 0.030303
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 3,
+        "share": 0.022727
+      }
+    ],
+    "1.15": [
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 3,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 3,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 3,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 2,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.083333
+      }
+    ],
+    "1.24": [
+      {
+        "value": "Врач Терапевт",
+        "count": 6,
+        "share": 0.285714
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 4,
+        "share": 0.190476
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 4,
+        "share": 0.190476
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 3,
+        "share": 0.142857
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 2,
+        "share": 0.095238
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 1,
+        "share": 0.047619
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 1,
+        "share": 0.047619
+      }
+    ],
+    "1.19.1": [
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 2,
+        "share": 0.285714
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 1,
+        "share": 0.142857
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.142857
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 1,
+        "share": 0.142857
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 1,
+        "share": 0.142857
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.142857
+      }
+    ],
+    "1.20": [
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.166667
+      }
+    ],
+    "1.8.1": [
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.166667
+      }
+    ],
+    "1.25": [
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 3,
+        "share": 0.3
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 2,
+        "share": 0.2
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 2,
+        "share": 0.2
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 1,
+        "share": 0.1
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 1,
+        "share": 0.1
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.1
+      }
+    ],
+    "3.1.8.3": [
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.166667
+      }
+    ],
+    "1.17": [
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 1,
+        "share": 0.5
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.5
+      }
+    ],
+    "1.36": [
+      {
+        "value": "Врач Терапевт",
+        "count": 8,
+        "share": 0.470588
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 4,
+        "share": 0.235294
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 2,
+        "share": 0.117647
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 2,
+        "share": 0.117647
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.058824
+      }
+    ],
+    "1.39": [
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 1,
+        "share": 0.2
+      }
+    ],
+    "3.1.1": [
+      {
+        "value": "Врач Терапевт",
+        "count": 2,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 1,
+        "share": 0.125
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 0.125
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.125
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.125
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 1,
+        "share": 0.125
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 1,
+        "share": 0.125
+      }
+    ],
+    "4.7": [
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 1,
+        "share": 0.5
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.5
+      }
+    ],
+    "4.8": [
+      {
+        "value": "Врач Терапевт",
+        "count": 5,
+        "share": 0.294118
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 2,
+        "share": 0.117647
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 2,
+        "share": 0.117647
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 2,
+        "share": 0.117647
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 2,
+        "share": 0.117647
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 2,
+        "share": 0.117647
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 1,
+        "share": 0.058824
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 0.058824
+      }
+    ],
+    "4.9": [
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 2,
+        "share": 0.5
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 1,
+        "share": 0.25
+      }
+    ],
+    "8": [
+      {
+        "value": "Врач Офтальмолог",
+        "count": 2,
+        "share": 0.5
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 1,
+        "share": 0.25
+      }
+    ],
+    "4.3.1": [
+      {
+        "value": "Врач Терапевт",
+        "count": 7,
+        "share": 0.225806
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 6,
+        "share": 0.193548
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 4,
+        "share": 0.129032
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 3,
+        "share": 0.096774
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 3,
+        "share": 0.096774
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 3,
+        "share": 0.096774
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 2,
+        "share": 0.064516
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 2,
+        "share": 0.064516
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 1,
+        "share": 0.032258
+      }
+    ],
+    "1.34.1": [
+      {
+        "value": "Врач Терапевт",
+        "count": 5,
+        "share": 0.384615
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 3,
+        "share": 0.230769
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 2,
+        "share": 0.153846
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 2,
+        "share": 0.153846
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 1,
+        "share": 0.076923
+      }
+    ],
+    "11.3": [
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.5
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.5
+      }
+    ],
+    "11.1": [
+      {
+        "value": "Врач Стоматолог",
+        "count": 2,
+        "share": 0.333333
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.166667
+      }
+    ],
+    "22": [
+      {
+        "value": "Аудиометрия",
+        "count": 2,
+        "share": 0.285714
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 2,
+        "share": 0.285714
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 2,
+        "share": 0.285714
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.142857
+      }
+    ],
+    "1.27": [
+      {
+        "value": "Врач Терапевт",
+        "count": 2,
+        "share": 0.4
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.2
+      }
+    ],
+    "4.3.2": [
+      {
+        "value": "Врач Терапевт",
+        "count": 7,
+        "share": 0.291667
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 4,
+        "share": 0.166667
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 3,
+        "share": 0.125
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 3,
+        "share": 0.125
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 2,
+        "share": 0.083333
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 2,
+        "share": 0.083333
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 2,
+        "share": 0.083333
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 1,
+        "share": 0.041667
+      }
+    ],
+    "2.4.3": [
+      {
+        "value": "Врач Офтальмолог",
+        "count": 12,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 12,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 8,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 8,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 4,
+        "share": 0.083333
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 3,
+        "share": 0.0625
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 1,
+        "share": 0.020833
+      }
+    ],
+    "4.1": [
+      {
+        "value": "Врач Офтальмолог",
+        "count": 5,
+        "share": 0.3125
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 4,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 2,
+        "share": 0.125
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 2,
+        "share": 0.125
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 0.0625
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 1,
+        "share": 0.0625
+      }
+    ],
+    "4.2.1": [
+      {
+        "value": "Врач Хирург",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.25
+      }
+    ],
+    "4.2.2": [
+      {
+        "value": "Врач Хирург",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.25
+      }
+    ],
+    "4.2.3": [
+      {
+        "value": "Врач Хирург",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.25
+      }
+    ],
+    "4.2.4": [
+      {
+        "value": "Врач Хирург",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.25
+      }
+    ],
+    "9": [
+      {
+        "value": "Врач Терапевт",
+        "count": 19,
+        "share": 0.22093
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 17,
+        "share": 0.197674
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 17,
+        "share": 0.197674
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 11,
+        "share": 0.127907
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 10,
+        "share": 0.116279
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 6,
+        "share": 0.069767
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 5,
+        "share": 0.05814
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 1,
+        "share": 0.011628
+      }
+    ],
+    "18.2": [
+      {
+        "value": "Врач Офтальмолог",
+        "count": 20,
+        "share": 0.246914
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 17,
+        "share": 0.209877
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 17,
+        "share": 0.209877
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 17,
+        "share": 0.209877
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 6,
+        "share": 0.074074
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 3,
+        "share": 0.037037
+      },
+      {
+        "value": "Врач Хирург",
+        "count": 1,
+        "share": 0.012346
+      }
+    ],
+    "1.14.2": [
+      {
+        "value": "Врач Офтальмолог",
+        "count": 3,
+        "share": 0.214286
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 3,
+        "share": 0.214286
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 2,
+        "share": 0.142857
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 2,
+        "share": 0.142857
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 2,
+        "share": 0.142857
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.071429
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.071429
+      }
+    ],
+    "1.5": [
+      {
+        "value": "Врач Невролог",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.25
+      }
+    ],
+    "2.4.2": [
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 6,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 5,
+        "share": 0.208333
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 4,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 3,
+        "share": 0.125
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 3,
+        "share": 0.125
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 3,
+        "share": 0.125
+      }
+    ],
+    "1.45.1": [
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 2,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 2,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 0.125
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 1,
+        "share": 0.125
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 1,
+        "share": 0.125
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.125
+      }
+    ],
+    "3.1.7": [
+      {
+        "value": "Врач Терапевт",
+        "count": 2,
+        "share": 0.5
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 1,
+        "share": 0.25
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.25
+      }
+    ],
+    "1.14.1": [
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 1,
+        "share": 0.5
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.5
+      }
+    ],
+    "1.43.2": [
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 1,
+        "share": 0.5
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.5
+      }
+    ],
+    "3.1.2": [
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Аудиометрия",
+        "count": 1,
+        "share": 0.166667
+      },
+      {
+        "value": "Врач Оториноларинголог",
+        "count": 1,
+        "share": 0.166667
+      }
+    ],
+    "1.38": [
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.5
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.5
+      }
+    ],
+    "1.29.1": [
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 1.0
+      }
+    ],
+    "1.29.2": [
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 1.0
+      }
+    ],
+    "1.29.4": [
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 1.0
+      }
+    ],
+    "1.30": [
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 1.0
+      }
+    ],
+    "1.40.1": [
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 1.0
+      }
+    ],
+    "1.45.3": [
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 1.0
+      }
+    ],
+    "1.49.4": [
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 1.0
+      }
+    ],
+    "1.8.1.1": [
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 1.0
+      }
+    ],
+    "1.48": [
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.333333
+      },
+      {
+        "value": "Врач Акушер-гинеколог",
+        "count": 1,
+        "share": 0.333333
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.333333
+      }
+    ],
+    "1.34": [
+      {
+        "value": "Врач Дерматовенеролог",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "Врач Невролог",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "Врач Офтальмолог",
+        "count": 1,
+        "share": 0.2
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.2
+      }
+    ],
+    "1.2": [
+      {
+        "value": "Врач Стоматолог",
+        "count": 1,
+        "share": 0.5
+      },
+      {
+        "value": "Врач Терапевт",
+        "count": 1,
+        "share": 0.5
+      }
+    ]
+  }
+}

@@ -1,18 +1,89 @@
 import sys
 from pathlib import Path
+from typing import Any
+
+import pandas as pd
+from fastapi import FastAPI, HTTPException
+from fastapi.encoders import jsonable_encoder
+from pydantic import BaseModel, Field
 
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 
-from medhack_ai_assistant.pipeline import run_training_pipeline
-from medhack_ai_assistant.services.dashboard import get_dashboard_by_exam_id
+from medhack_ai_assistant.config import ID_COLUMN
+from medhack_ai_assistant.pipeline import analyze_patient_exam, run_quality_gate
+from medhack_ai_assistant.services.dashboard import build_dashboard, load_backend_dataset
 
 
-def main() -> None:
-    result = run_training_pipeline()
-    dashboard = get_dashboard_by_exam_id(1015884464)
-    print(dashboard.decision_label)
-    print(dashboard.diagnoses)
+app = FastAPI(
+    title="MedHack AI Assistant API",
+    version="0.1.0",
+    description="Runtime API for occupational health contraindication analysis.",
+)
 
-if __name__ == "__main__":
-    main()
+
+class AnalyzeRequest(BaseModel):
+    exam_row_id: int | None = Field(
+        default=None,
+        description="Exam row id to load from train/test dataset.",
+    )
+    use_train: bool = Field(
+        default=False,
+        description="Read exam_row_id from train.csv instead of test.csv.",
+    )
+    payload: dict[str, Any] | None = Field(
+        default=None,
+        description="Full patient package. Takes precedence over exam_row_id.",
+    )
+
+
+@app.get("/health")
+async def health() -> dict[str, str]:
+    return {"status": "ok"}
+
+
+@app.post("/api/v1/analyze")
+async def analyze(request: AnalyzeRequest) -> dict[str, Any]:
+    row = _resolve_patient_row(request)
+    result = await analyze_patient_exam(row)
+    return jsonable_encoder(result.to_dict())
+
+
+@app.post("/api/v1/quality-gate")
+async def quality_gate(request: AnalyzeRequest) -> dict[str, Any]:
+    row = _resolve_patient_row(request)
+    result = run_quality_gate(row)
+    return jsonable_encoder(result)
+
+
+@app.get("/api/v1/dashboard/{exam_row_id}")
+async def dashboard(exam_row_id: int, use_train: bool = False) -> dict[str, Any]:
+    row = _load_exam_row(exam_row_id, use_train=use_train)
+    return jsonable_encoder(build_dashboard(row).to_dict())
+
+
+def _resolve_patient_row(request: AnalyzeRequest) -> pd.Series | dict[str, Any]:
+    if request.payload is not None:
+        return request.payload
+
+    if request.exam_row_id is None:
+        raise HTTPException(
+            status_code=422,
+            detail="Provide either payload or exam_row_id.",
+        )
+
+    return _load_exam_row(request.exam_row_id, use_train=request.use_train)
+
+
+def _load_exam_row(exam_row_id: int, *, use_train: bool) -> pd.Series:
+    dataset = load_backend_dataset(use_train=use_train)
+    matched = dataset.loc[dataset[ID_COLUMN] == exam_row_id]
+
+    if matched.empty:
+        dataset_name = "train.csv" if use_train else "test.csv"
+        raise HTTPException(
+            status_code=404,
+            detail=f"Exam row {exam_row_id} was not found in {dataset_name}.",
+        )
+
+    return matched.iloc[0]
