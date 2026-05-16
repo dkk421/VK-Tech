@@ -39,11 +39,13 @@ class AnalyzeRequest(BaseModel):
 
 @app.get("/health")
 async def health() -> dict[str, str]:
+    """Health check endpoint."""
     return {"status": "ok"}
 
 
 @app.post("/api/v1/analyze")
 async def analyze(request: AnalyzeRequest) -> dict[str, Any]:
+    """Analyze patient for contraindications."""
     row = _resolve_patient_row(request)
     result = await analyze_patient_exam(row)
     return jsonable_encoder(result.to_dict())
@@ -51,6 +53,7 @@ async def analyze(request: AnalyzeRequest) -> dict[str, Any]:
 
 @app.post("/api/v1/quality-gate")
 async def quality_gate(request: AnalyzeRequest) -> dict[str, Any]:
+    """Check if patient data passes quality gate."""
     row = _resolve_patient_row(request)
     result = run_quality_gate(row)
     return jsonable_encoder(result)
@@ -58,11 +61,13 @@ async def quality_gate(request: AnalyzeRequest) -> dict[str, Any]:
 
 @app.get("/api/v1/dashboard/{exam_row_id}")
 async def dashboard(exam_row_id: int, use_train: bool = False) -> dict[str, Any]:
+    """Get dashboard data for a patient."""
     row = _load_exam_row(exam_row_id, use_train=use_train)
     return jsonable_encoder(build_dashboard(row).to_dict())
 
 
 def _resolve_patient_row(request: AnalyzeRequest) -> pd.Series | dict[str, Any]:
+    """Resolve patient row from request payload or ID."""
     if request.payload is not None:
         return request.payload
 
@@ -76,6 +81,7 @@ def _resolve_patient_row(request: AnalyzeRequest) -> pd.Series | dict[str, Any]:
 
 
 def _load_exam_row(exam_row_id: int, *, use_train: bool) -> pd.Series:
+    """Load exam row from dataset by ID."""
     dataset = load_backend_dataset(use_train=use_train)
     matched = dataset.loc[dataset[ID_COLUMN] == exam_row_id]
 
@@ -87,3 +93,14 @@ def _load_exam_row(exam_row_id: int, *, use_train: bool) -> pd.Series:
         )
 
     return matched.iloc[0]
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(
+        "main:app",
+        host="127.0.0.1",
+        port=8000,
+        reload=True,
+    )
