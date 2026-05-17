@@ -5,14 +5,10 @@ description = "AI assistant for occupational health contraindication detection"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "fastapi>=0.136.1",
-    "httpx>=0.28.1",
-    "openpyxl>=3.1.5",
+    "numpy>=2.0.0",
     "pandas>=3.0.3",
-    "plotly>=6.7.0",
     "pymupdf>=1.24.0",
     "python-dotenv>=1.2.2",
-    "scikit-learn>=1.8.0",
     "streamlit>=1.57.0",
-    "uvicorn>=0.47.0",
+    "tqdm>=4.67.0",
 ]
