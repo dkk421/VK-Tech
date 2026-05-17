@@ -195,13 +195,9 @@ def _select_exam_row(dataframe: pd.DataFrame) -> pd.Series | None:
 def render_patient_overview(exam: PatientExam) -> None:
     quality = run_quality_gate(exam)
     data_status = "готово к AI-анализу" if quality.can_analyze else "нужны дополнительные данные"
-    attention_count = sum(
-        1 for conclusion in exam.specialist_conclusions if conclusion.has_attention_marker
-    )
 
     render_patient_summary_card(
         exam,
         risks_count=len(exam.assigned_harmful_factors),
-        attention_count=attention_count,
         data_status=data_status,
     )
