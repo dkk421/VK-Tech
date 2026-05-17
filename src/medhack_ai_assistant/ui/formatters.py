@@ -11,18 +11,6 @@ def readable_dataframe(dataframe: pd.DataFrame) -> pd.DataFrame:
     return result
 
 
-def display_value(value: Any) -> str:
-    if value is None or pd.isna(value):
-        return ""
-
-    text = str(value)
-    try:
-        fixed = text.encode("cp1251").decode("utf-8")
-    except UnicodeError:
-        return text
-    return fixed if _mojibake_score(fixed) < _mojibake_score(text) else text
-
-
 def shorten(text: str, max_length: int) -> str:
     if len(text) <= max_length:
         return text
@@ -37,6 +25,12 @@ def translate_quality_reason(reason: str) -> str:
     return translations.get(reason, display_value(reason))
 
 
-def _mojibake_score(text: str) -> int:
-    markers = ("Р ", "РЎ", "Гђ", "Г‘", "Рѓ", "РЏ", "РЊ", "Р‚")
-    return sum(text.count(marker) for marker in markers)
+def display_value(value: Any) -> str:
+    if value is None:
+        return ""
+    try:
+        if pd.isna(value):
+            return ""
+    except (TypeError, ValueError):
+        pass
+    return str(value)

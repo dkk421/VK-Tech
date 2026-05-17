@@ -6,14 +6,78 @@ from medhack_ai_assistant.domain.models import PatientExam
 from medhack_ai_assistant.ui.formatters import display_value, shorten
 
 
-def render_patient_summary(exam: PatientExam) -> None:
-    st.subheader("Карточка пациента")
+def render_patient_summary_card(
+    exam: PatientExam,
+    *,
+    risks_count: int = 0,
+    attention_count: int = 0,
+    data_status: str = "готово к AI-анализу",
+) -> None:
+    conclusions_count = len(exam.specialist_conclusions)
 
-    col_patient, col_exam, col_date, col_factors = st.columns(4)
-    col_patient.metric("Пациент", exam.patient_id)
-    col_exam.metric("Осмотр", exam.exam_row_id)
-    col_date.metric("Дата", display_value(exam.consultation_date) or "не указана")
-    col_factors.metric("Факторов", len(exam.assigned_harmful_factors))
+    with st.container(border=True):
+        st.markdown("### Сводка по пациенту")
+
+        left, right = st.columns([1.2, 1])
+
+        with left:
+            st.markdown(f"#### Пациент #{exam.patient_id}")
+            st.caption(f"Осмотр #{exam.exam_row_id}")
+            st.write(f"Дата консультации: {display_value(exam.consultation_date) or 'не указана'}")
+            st.write(f"Статус данных: **{data_status}**")
+
+        with right:
+            render_patient_stat(
+                icon="📋",
+                label="Факторов в направлении",
+                value=str(risks_count),
+                status="ok",
+            )
+
+            render_patient_stat(
+                icon="🩺",
+                label="Заключений специалистов",
+                value=str(conclusions_count),
+                status="warn",
+            )
+
+            render_patient_stat(
+                icon="⚠️",
+                label="Требуют внимания",
+                value=str(attention_count),
+                status="bad",
+            )
+
+
+def render_patient_stat(
+    *,
+    icon: str,
+    label: str,
+    value: str,
+    status: str,
+) -> None:
+    st.markdown(
+        f"""
+        <div class="patient-stat patient-stat-{status}">
+            <div class="patient-stat-icon">{icon}</div>
+            <div>
+                <div class="patient-stat-label">{label}</div>
+                <div class="patient-stat-value">{value}</div>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def render_patient_summary(exam: PatientExam) -> None:
+    render_patient_summary_card(
+        exam,
+        risks_count=len(exam.assigned_harmful_factors),
+        attention_count=sum(
+            1 for conclusion in exam.specialist_conclusions if conclusion.has_attention_marker
+        ),
+    )
 
     row = st.session_state.get("selected_row")
     if isinstance(row, pd.Series):
@@ -45,7 +109,7 @@ def render_specialist_conclusions(exam: PatientExam) -> None:
         }
         for item in exam.specialist_conclusions
     ]
-    st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+    st.dataframe(pd.DataFrame(rows), width="stretch", hide_index=True)
 
 
 def _render_known_target(row: pd.Series) -> None:

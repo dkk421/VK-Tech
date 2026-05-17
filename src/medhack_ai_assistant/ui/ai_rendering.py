@@ -52,7 +52,7 @@ def render_ai_evidence(result: AnalysisResult) -> None:
         }
         for item in result.evidence
     ]
-    st.dataframe(pd.DataFrame(evidence), use_container_width=True, hide_index=True)
+    st.dataframe(pd.DataFrame(evidence), width="stretch", hide_index=True)
 
 
 def render_follow_up(result: AnalysisResult) -> None:
