@@ -1,17 +1,61 @@
 import json
 import os
 import re
+import warnings
 from pathlib import Path
 from typing import Any
 
+import joblib
 import numpy as np
 import pandas as pd
 
+warnings.filterwarnings("ignore")
+
 try:
     from tqdm import tqdm
-except ImportError:  # pragma: no cover - local UI can run without tqdm
+except ImportError:  # pragma: no cover
     def tqdm(iterable, **_: Any):
         return iterable
+
+
+# =========================================================================
+# ОБЯЗАТЕЛЬНО: Объявляем класс, чтобы joblib смог распаковать модель
+# =========================================================================
+class RobustMultiOutputClassifier:
+    def __init__(self, base_estimator, n_jobs=-1):
+        self.base_estimator = base_estimator
+        self.n_jobs = n_jobs
+        self.estimators_ = []
+        self.single_class_models = {}
+
+    def fit(self, X, Y):
+        pass
+
+    def predict_proba(self, X):
+        num_samples = X.shape[0]
+        num_outputs = len(self.estimators_)
+        probas = np.zeros((num_samples, num_outputs))
+        
+        for i in range(num_outputs):
+            clf = self.estimators_[i]
+            if clf is not None:
+                probas[:, i] = clf.predict_proba(X)[:, 1]
+            else:
+                probas[:, i] = float(self.single_class_models[i])
+        return probas
+
+
+def register_joblib_compat_classes() -> None:
+    import sys
+    import types
+
+    main_module = sys.modules.get("main")
+    if main_module is None:
+        main_module = types.ModuleType("main")
+        sys.modules["main"] = main_module
+
+    setattr(main_module, "RobustMultiOutputClassifier", RobustMultiOutputClassifier)
+    setattr(sys.modules["__main__"], "RobustMultiOutputClassifier", RobustMultiOutputClassifier)
 
 
 def _find_project_root() -> Path:
@@ -26,9 +70,7 @@ def _find_project_root() -> Path:
 
 
 BASE_DIR = _find_project_root()
-DEFAULT_CHUNKS_PATH = BASE_DIR / "data" / "reference" / "order_29n" / "processed" / "order_29n_chunks.jsonl"
-LEGACY_CHUNKS_PATH = BASE_DIR / "order_29n_chunks.jsonl"
-CHUNKS_PATH = DEFAULT_CHUNKS_PATH if DEFAULT_CHUNKS_PATH.exists() else LEGACY_CHUNKS_PATH
+MODEL_PATH = BASE_DIR / "data" / "models_weights" / "final_solution.joblib"
 
 TRAIN_PATH = BASE_DIR / "data" / "train.csv"
 TEST_PATH = BASE_DIR / "data" / "test.csv"
@@ -45,6 +87,22 @@ else:
     DATA_PATH = TEST_PATH if TEST_PATH.exists() else LEGACY_TEST_PATH
     LIMIT_ROWS = None
     OUTPUT_CSV_PATH = BASE_DIR / "submission.csv"
+
+
+# =========================================================================
+# КЭШ ДЛЯ КАРТИРОВАНИЯ ML-МОДЕЛИ
+# =========================================================================
+_MODEL_ARTIFACTS_CACHE: dict[str, Any] | None = None
+
+def get_model_artifacts() -> dict[str, Any]:
+    global _MODEL_ARTIFACTS_CACHE
+    if _MODEL_ARTIFACTS_CACHE is None:
+        if not MODEL_PATH.exists():
+            print(f"Error: Model file {MODEL_PATH} not found.")
+            raise FileNotFoundError(f"Missing weights file at {MODEL_PATH}")
+        register_joblib_compat_classes()
+        _MODEL_ARTIFACTS_CACHE = joblib.load(MODEL_PATH)
+    return _MODEL_ARTIFACTS_CACHE
 
 
 def normalize_factor_code(value) -> str:
@@ -77,53 +135,6 @@ def calculate_jaccard(preds: list, targets: list) -> float:
                     break
     union_count = len(set_p) + len(set_t) - intersection_count
     return intersection_count / union_count if union_count > 0 else 0.0
-
-
-def build_factor_rules(chunks_path: Path = CHUNKS_PATH) -> dict[str, dict[str, set[str]]]:
-    factor_rules: dict[str, dict[str, set[str]]] = {}
-
-    if not chunks_path.exists():
-        return factor_rules
-
-    with open(chunks_path, "r", encoding="utf-8") as f:
-        for line in f:
-            if not line.strip():
-                continue
-
-            chunk_data = json.loads(line)
-            text = chunk_data.get("text", "").lower()
-            clean_codes = chunk_data.get("factor_codes", [])
-            mkb_matches = re.findall(r"\b[A-Z]\d{2}(?:\.\d)?\b", text.upper())
-
-            for code in clean_codes:
-                str_c = str(code).strip().replace(",", ".")
-                if not str_c:
-                    continue
-                if str_c not in factor_rules:
-                    factor_rules[str_c] = {"mkb": set(), "keywords": set()}
-
-                for match in mkb_matches:
-                    factor_rules[str_c]["mkb"].add(match)
-
-                if "гипертоническ" in text or "давлен" in text:
-                    factor_rules[str_c]["keywords"].add("гипертензия")
-                    factor_rules[str_c]["keywords"].add("i10")
-                if "зрен" in text or "глаз" in text:
-                    factor_rules[str_c]["keywords"].add("миопия")
-                if "слух" in text or "ух" in text:
-                    factor_rules[str_c]["keywords"].add("тугоухость")
-
-    return factor_rules
-
-
-_FACTOR_RULES_CACHE: dict[str, dict[str, set[str]]] | None = None
-
-
-def get_factor_rules() -> dict[str, dict[str, set[str]]]:
-    global _FACTOR_RULES_CACHE
-    if _FACTOR_RULES_CACHE is None:
-        _FACTOR_RULES_CACHE = build_factor_rules()
-    return _FACTOR_RULES_CACHE
 
 
 def extract_patient_features(row: pd.Series | dict[str, Any]) -> tuple[list[str], set[str], str]:
@@ -199,7 +210,7 @@ def build_human_summary(
     if not mkb_details:
         return (
             f"Выявлены возможные противопоказания по факторам: {factors_text}. "
-            "Основание: совпадение с правилами Приказа 29н по тексту медицинских заключений."
+            "Основание: математический анализ текста медицинских заключений моделью ML."
         )
 
     diagnoses = []
@@ -219,47 +230,50 @@ def build_human_summary(
     )
 
 
+# =========================================================================
+# ОБНОВЛЕННАЯ ФУНКЦИЯ ПРЕДСКАЗАНИЯ НА ОСНОВЕ LOGISTIC REGRESSION
+# =========================================================================
 def predict_row_factors(
     row: pd.Series | dict[str, Any],
-    *,
-    factor_rules: dict[str, dict[str, set[str]]] | None = None,
+    *args, **kwargs
 ) -> list[str]:
-    factor_rules = factor_rules if factor_rules is not None else get_factor_rules()
-    assigned_factors, patient_mkb_codes, full_conclusion_text = extract_patient_features(row)
+    # Получаем артефакты обученного пайплайна
+    artifacts = get_model_artifacts()
+    tfidf = artifacts["tfidf"]
+    robust_clf = artifacts["clf"]
+    best_threshold = artifacts["best_threshold"]
+    factors_columns = artifacts["factors"]
 
+    # 1. Извлекаем базовые свойства (для фильтрации по назначенным факторам)
+    assigned_factors, _, _ = extract_patient_features(row)
     if not assigned_factors:
         return []
 
+    # 2. Формируем текстовый признак ровно так же, как при обучении
+    specialist_text = str(row.get('specialist_conclusions', "")).replace("nan", "")
+    assigned_text = str(row.get('assigned_harmful_factors', "")).replace("nan", "")
+    combined_text = f"{specialist_text} {assigned_text}"
+
+    # 3. Инференс ML модели
+    X_transformed = tfidf.transform([combined_text])
+    probas = robust_clf.predict_proba(X_transformed)[0]  # Берем вероятности для одной строки
+
+    # Применяем порог
+    predicted_indices = np.where(probas >= best_threshold)[0]
+    
     validated_contraindications = []
-
-    for assigned_factor in assigned_factors:
-        is_bad = False
-
-        for rule_code, rules in factor_rules.items():
+    for idx in predicted_indices:
+        pred_factor = factors_columns[idx]
+        
+        # Фильтрация: проверяем, пересекается ли предсказанный фактор с тем, что реально назначен сотруднику
+        # Это предотвращает ложные срабатывания по факторам, которых у человека в принципе нет на работе.
+        for assigned_factor in assigned_factors:
             if (
-                assigned_factor == rule_code
-                or assigned_factor.startswith(rule_code + ".")
-                or rule_code.startswith(assigned_factor + ".")
+                assigned_factor == pred_factor
+                or assigned_factor.startswith(pred_factor + ".")
+                or pred_factor.startswith(assigned_factor + ".")
             ):
-                if patient_mkb_codes.intersection(rules["mkb"]):
-                    is_bad = True
-                    break
-
-                for keyword in rules["keywords"]:
-                    if keyword in full_conclusion_text:
-                        is_bad = True
-                        break
-                if is_bad:
-                    break
-
-        if (
-            f"противопоказан {assigned_factor}" in full_conclusion_text
-            or f"п. {assigned_factor}" in full_conclusion_text
-        ):
-            is_bad = True
-
-        if is_bad:
-            validated_contraindications.append(assigned_factor)
+                validated_contraindications.append(assigned_factor)
 
     return sorted(set(validated_contraindications))
 
@@ -272,7 +286,6 @@ def analyze_row(row: pd.Series | dict[str, Any]) -> dict[str, Any]:
     exam_id = int(row.get("exam_row_id", 0))
     assigned_factors, patient_mkb_codes, _ = extract_patient_features(row)
     predicted_factors = predict_row_factors(row)
-    factor_rules = get_factor_rules()
     mkb_details = extract_mkb_details(row)
 
     verdict = "UNFIT" if predicted_factors else "FIT"
@@ -303,7 +316,7 @@ def analyze_row(row: pd.Series | dict[str, Any]) -> dict[str, Any]:
         "assigned_factors": assigned_factors,
         "mkb_codes": sorted(patient_mkb_codes),
         "evidence": evidence,
-        "rules_count": len(factor_rules),
+        "rules_count": len(get_model_artifacts()["factors"]),
     }
 
 
@@ -350,8 +363,8 @@ def run_solution(
 ) -> None:
     print(f"Mode: {'validation' if validation_mode else 'test inference'}")
 
-    factor_rules = get_factor_rules()
-    print(f"Knowledge base: built rules for {len(factor_rules)} factors.")
+    artifacts = get_model_artifacts()
+    print(f"ML Model loaded successfully. Supported target factors: {len(artifacts['factors'])}")
 
     if not data_path.exists():
         print(f"Error: file {data_path.name} was not found.")
@@ -369,7 +382,7 @@ def run_solution(
     stats_zeros = 0
     stats_contra = 0
 
-    print("Starting deterministic Data Mining analysis...")
+    print("Starting ML Logistic Regression inference analysis...")
 
     for _, row in tqdm(df_data.iterrows(), total=len(df_data), desc="Analysis"):
         exam_id = int(row["exam_row_id"])
@@ -384,7 +397,7 @@ def run_solution(
                     if normalize_factor_code(factor)
                 ]
 
-        predicted_factors = predict_row_factors(row, factor_rules=factor_rules)
+        predicted_factors = predict_row_factors(row)
         final_str = format_factors(predicted_factors)
 
         if predicted_factors:
