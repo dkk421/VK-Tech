@@ -57,6 +57,55 @@ APP_CSS = """
     font-weight: 700;
     font-size: 1rem;
 }
+
+.factor-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.factor-card-meta {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.factor-chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.factor-chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 6px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 999px;
+    background: #f8fafc;
+    color: #0f172a;
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.empty-state {
+    padding: 14px 16px;
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    background: #f8fafc;
+}
+
+.empty-state-title {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.empty-state-text {
+    margin-top: 4px;
+    color: #64748b;
+    font-size: 0.92rem;
+}
 </style>
 """
 

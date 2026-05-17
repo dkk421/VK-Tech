@@ -1,3 +1,5 @@
+from html import escape
+
 import pandas as pd
 import streamlit as st
 
@@ -85,11 +87,34 @@ def render_patient_summary(exam: PatientExam) -> None:
 
 
 def render_findings(exam: PatientExam) -> None:
-    st.subheader("Вредные факторы")
-    if exam.assigned_harmful_factors:
-        st.write(", ".join(exam.assigned_harmful_factors))
-    else:
-        st.info("Вредные факторы не указаны.")
+    factors = tuple(factor for factor in exam.assigned_harmful_factors if factor)
+
+    with st.container(border=True):
+        st.markdown("### Вредные факторы")
+
+        if not factors:
+            st.markdown(
+                """
+                <div class="empty-state">
+                    <div class="empty-state-title">Факторы не указаны</div>
+                    <div class="empty-state-text">В направлении нет перечисленных вредных факторов.</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+            return
+
+        count_label = _format_factor_count(len(factors))
+        chips = "".join(f'<span class="factor-chip">{escape(factor)}</span>' for factor in factors)
+        st.markdown(
+            f"""
+            <div class="factor-card">
+                <div class="factor-card-meta">{count_label}</div>
+                <div class="factor-chip-list">{chips}</div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
 
 def render_specialist_conclusions(exam: PatientExam) -> None:
@@ -110,6 +135,19 @@ def render_specialist_conclusions(exam: PatientExam) -> None:
         for item in exam.specialist_conclusions
     ]
     st.dataframe(pd.DataFrame(rows), width="stretch", hide_index=True)
+
+
+def _format_factor_count(count: int) -> str:
+    if 11 <= count % 100 <= 14:
+        word = "факторов"
+    elif count % 10 == 1:
+        word = "фактор"
+    elif 2 <= count % 10 <= 4:
+        word = "фактора"
+    else:
+        word = "факторов"
+
+    return f"{count} {word} в направлении"
 
 
 def _render_known_target(row: pd.Series) -> None:
