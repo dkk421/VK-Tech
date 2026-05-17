@@ -9,6 +9,7 @@ sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
 from medhack_ai_assistant.streamlit_app import (
     load_selected_dataset,
+    render_batch_analysis_page,
     render_ai_section,
     render_detailed_data,
     render_findings,
@@ -23,6 +24,10 @@ from medhack_ai_assistant.streamlit_app import (
 def main() -> None:
     setup_page()
     render_header()
+
+    if st.session_state.get("batch_analysis_page"):
+        render_batch_analysis_page()
+        return
 
     dataframe = load_selected_dataset()
     exam = select_exam(dataframe)

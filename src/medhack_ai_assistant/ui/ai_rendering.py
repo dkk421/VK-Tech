@@ -22,10 +22,6 @@ def render_ai_verdict(result: AnalysisResult) -> None:
     else:
         st.warning("Требуется дополнительная проверка")
 
-    confidence = result.raw_llm_response.get("confidence")
-    if isinstance(confidence, int | float):
-        st.caption(f"Уверенность модели: {confidence:.2f}")
-
 
 def render_ai_summary(result: AnalysisResult) -> None:
     summary = display_value(result.summary)

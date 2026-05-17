@@ -23,7 +23,8 @@ APP_CSS = """
     display: flex;
     gap: 12px;
     align-items: center;
-    padding: 10px 0;
+    padding: 12px 10px;
+    min-width: 0;
 }
 
 .patient-stat-icon {
@@ -55,7 +56,9 @@ APP_CSS = """
 .patient-stat-value {
     color: #0f172a;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.25;
+    word-break: break-word;
 }
 
 .factor-card {

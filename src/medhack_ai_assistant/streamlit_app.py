@@ -4,6 +4,8 @@ from medhack_ai_assistant.ui.cards import (
 )
 from medhack_ai_assistant.ui.sections import (
     load_selected_dataset,
+    render_batch_analysis_launcher,
+    render_batch_analysis_page,
     render_ai_section,
     render_detailed_data,
     render_header,
@@ -15,6 +17,8 @@ from medhack_ai_assistant.ui.sections import (
 
 __all__ = [
     "load_selected_dataset",
+    "render_batch_analysis_launcher",
+    "render_batch_analysis_page",
     "render_ai_section",
     "render_detailed_data",
     "render_findings",
