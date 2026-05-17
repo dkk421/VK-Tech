@@ -10,11 +10,11 @@ from medhack_ai_assistant.services.document_export import (
     MedicalConclusionData,
     generate_medical_docx,
 )
+from medhack_ai_assistant.services.inference import analyze_row, analyze_row_as_result, format_factors
 from medhack_ai_assistant.ui.ai_rendering import render_analysis_result
 from medhack_ai_assistant.ui.formatters import readable_dataframe
 from medhack_ai_assistant.ui.styles import render_global_styles
 from medhack_ai_assistant.ui.cards import render_patient_summary_card
-from solution import analyze_row, analyze_row_as_result, format_factors
 
 
 def setup_page() -> None:
