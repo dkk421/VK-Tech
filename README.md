@@ -65,7 +65,7 @@ uv run python generate_submission.py
 
 ```text
 app.py                                      Streamlit entrypoint
-solution.py                                 основной inference/submission и источник анализа для UI
+solution.py                                 тонкий entrypoint для submission и совместимых импортов
 s.py                                        обучение модели и сохранение final_solution.joblib
 generate_submission.py                      отдельный скрипт генерации submission из сохраненной модели
 
@@ -74,14 +74,15 @@ data/test.csv                               тестовый датасет
 data/models_weights/final_solution.joblib   основная сохраненная ML-модель
 
 src/medhack_ai_assistant/ui/                Streamlit UI-компоненты
-src/medhack_ai_assistant/services/          dashboard, mining, export DOCX/PDF
+src/medhack_ai_assistant/services/          inference, dashboard, mining, export DOCX/PDF
 src/medhack_ai_assistant/parsing/           парсинг заключений и Приказа 29н
 src/medhack_ai_assistant/domain/            dataclass-модели
 ```
 
 ## Важные замечания
 
-- `solution.py`, `s.py` и `generate_submission.py` оставлены на местах специально, чтобы не менять рабочую логику перед дедлайном.
+- `solution.py`, `s.py` и `generate_submission.py` оставлены на местах специально, чтобы не менять рабочие команды перед дедлайном.
+- Основная inference-логика находится в `src/medhack_ai_assistant/services/inference.py`.
 - `solution1.py` считается локальным черновиком и добавлен в `.gitignore`.
 - `submission.csv` также игнорируется git, потому что это генерируемый результат.
 - Для загрузки старого `joblib`-артефакта в `solution.py` есть compatibility alias для `main.RobustMultiOutputClassifier`.
