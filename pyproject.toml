@@ -15,4 +15,5 @@ dependencies = [
     "scikit-learn>=1.8.0",
     "streamlit>=1.57.0",
     "uvicorn>=0.47.0",
+    "xgboost>=3.2.0",
 ]

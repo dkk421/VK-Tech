@@ -4,6 +4,8 @@ from pathlib import Path
 from typing import Any
 
 import pandas as pd
+import numpy as np
+import joblib
 
 from .config import (
     ID_COLUMN,
@@ -22,17 +24,6 @@ from .domain.models import (
     QualityGateResult,
     RAGContext,
 )
-from .ml import (
-    AsyncVLLMClient,
-    LLMMessage,
-    ValidationResult,
-    VLLMClientError,
-    VLLMResponseFormatError,
-    predict_with_threshold,
-    train_and_validate,
-    train_final_model,
-)
-from .parsing.order_29n import build_order_context_for_prompt
 from .preprocessing import build_text_feature
 from .services.dashboard import build_patient_exam
 from .services.factor_mining import empty_mining_context, get_mining_context
@@ -46,35 +37,49 @@ class PipelineResult:
     submission: pd.DataFrame
     submission_path: Path
 
-SYSTEM_PROMPT = """
-Ты — AI-ассистент врача-профпатолога.
 
-Твоя задача — НЕ ставить диагноз и НЕ принимать финальное медицинское решение.
-Твоя задача — подготовить структурированную предварительную сводку для врача-профпатолога.
+# ==========================================
+# ЗАГРУЗКА ЛОКАЛЬНЫХ МОДЕЛЕЙ
+# ==========================================
 
-Ты анализируешь:
-1. вредные производственные факторы из направления;
-2. заключения профильных специалистов;
-3. МКБ-коды и описания диагнозов;
-4. группы здоровья;
-5. контекст Приказа Минздрава РФ №29н;
-6. историческую статистику решений, если она передана.
+_MODELS_CACHE = {
+    "models": None,
+    "thresholds": None,
+    "factors": None,
+    "tfidf": None,
+}
 
-Правила:
-- Не добавляй противопоказанные факторы, которых нет во входном списке assigned_harmful_factors.
-- Если связь диагноза с фактором неочевидна, не утверждай противопоказание, а используй NEEDS_MORE_INFO.
-- Если данных недостаточно, используй NEEDS_MORE_INFO.
-- Если есть возможное противопоказание, объясни его через диагноз, МКБ, специалиста и фактор.
-- Не выдумывай факты, обследования, диагнозы или ссылки на приказ.
-- Ответ должен быть только валидным JSON.
-- Не используй markdown.
-- Не добавляй текст до или после JSON.
 
-Допустимые verdict:
-- FIT: явных противопоказаний не найдено;
-- UNFIT: есть возможные противопоказания к одному или нескольким факторам;
-- NEEDS_MORE_INFO: данных недостаточно или требуется ручная проверка.
-"""
+def _get_models_dir() -> Path:
+    """Получить папку с моделями."""
+    return Path(__file__).parent.parent / "models"
+
+
+def _load_local_models() -> dict[str, Any]:
+    """Загрузить обученные XGBoost модели (с кэшированием)."""
+    if _MODELS_CACHE["models"] is not None:
+        return _MODELS_CACHE
+    
+    models_dir = _get_models_dir()
+    
+    if not models_dir.exists():
+        raise FileNotFoundError(
+            f"Папка с моделями не найдена: {models_dir}\n"
+            "Пожалуйста, сначала обучите модель: python src/medhack_ai_assistant/services/local_ai.py"
+        )
+    
+    try:
+        _MODELS_CACHE["models"] = joblib.load(models_dir / "xgboost_models.pkl")
+        _MODELS_CACHE["thresholds"] = joblib.load(models_dir / "best_thresholds.pkl")
+        _MODELS_CACHE["factors"] = joblib.load(models_dir / "all_factors.pkl")
+        _MODELS_CACHE["tfidf"] = joblib.load(models_dir / "model_config.pkl")
+    except FileNotFoundError as e:
+        raise FileNotFoundError(
+            f"Не удалось загрузить модели из {models_dir}: {e}\n"
+            "Убедитесь, что вы запустили: python src/medhack_ai_assistant/services/local_ai.py"
+        )
+    
+    return _MODELS_CACHE
 
 
 EMPTY_RAG_CONTEXT = RAGContext(chunks=(), text="", total_chars=0)
@@ -207,69 +212,210 @@ def build_patient_prompt(
     ]
 
 
-async def analyze_patient_exam(
+def analyze_patient_exam(
     row_or_exam: pd.Series | dict[str, Any] | PatientExam,
-    *,
-    vllm_client: AsyncVLLMClient | None = None,
 ) -> AnalysisResult:
+    """Анализ осмотра с использованием локальной XGBoost модели."""
     quality_gate = run_quality_gate(row_or_exam)
 
     try:
         exam = _ensure_exam(row_or_exam)
-    except Exception:
+    except Exception as e:
         return _analysis_result(
-            status="NEEDS_MORE_INFO",
+            status="PARSE_ERROR",
             verdict="NEEDS_MORE_INFO",
-            summary="Patient package cannot be parsed and needs a data quality follow-up.",
+            summary=f"Не удалось распарсить данные осмотра: {e}",
             quality_gate=quality_gate,
         )
 
     if not quality_gate.can_analyze:
         return _analysis_result(
-            status="NEEDS_MORE_INFO",
+            status="INSUFFICIENT_DATA",
             verdict="NEEDS_MORE_INFO",
-            summary="Patient package did not pass Quality Gate.",
+            summary="Данные осмотра не прошли проверку качества. Требуются дополнительные сведения.",
             quality_gate=quality_gate,
             exam=exam,
         )
-
-    mining_context = get_mining_context(exam)
-    rag_context = build_order_context_for_prompt(exam.assigned_harmful_factors)
-    messages = build_patient_prompt(exam, rag_context, mining_context)
-
-    owns_client = vllm_client is None
-    client = vllm_client or AsyncVLLMClient()
 
     try:
-        raw_response = await client.chat_json(messages)
-    except (VLLMClientError, VLLMResponseFormatError) as exc:
+        models_cache = _load_local_models()
+        final_models = models_cache["models"]
+        best_thresholds = models_cache["thresholds"]
+        all_factors = models_cache["factors"]
+    except FileNotFoundError as e:
         return _analysis_result(
-            status="MODEL_UNAVAILABLE",
+            status="MODEL_ERROR",
             verdict="NEEDS_MORE_INFO",
-            summary=f"Model inference is unavailable or invalid: {exc}",
+            summary=f"Не удалось загрузить модели: {e}",
             quality_gate=quality_gate,
-            rag_context=rag_context,
-            mining_context=mining_context,
-            raw_llm_response={},
             exam=exam,
         )
-    finally:
-        if owns_client:
-            await client.aclose()
 
-    return _build_analysis_from_llm(
-        exam=exam,
-        quality_gate=quality_gate,
-        rag_context=rag_context,
-        mining_context=mining_context,
-        raw_response=raw_response,
-    )
+    # Подготовка текста пациента для предсказания
+    try:
+        text_features = _prepare_exam_text(exam)
+        
+        # Предсказания для каждого фактора
+        predicted_factors = {}
+        confidences = {}
+        
+        for factor in all_factors:
+            if factor not in final_models:
+                continue
+            
+            model = final_models[factor]
+            threshold = best_thresholds.get(factor, 0.5)
+            
+            # Используем pipeline для TF-IDF + XGBoost
+            proba = model.predict_proba([text_features])[0, 1]
+            is_unfit = proba >= threshold
+            
+            predicted_factors[factor] = is_unfit
+            confidences[factor] = float(proba)
+        
+        # Фильтруем по assigned_harmful_factors (бизнес-правило)
+        assigned_set = set(exam.assigned_harmful_factors)
+        final_factors = tuple(
+            f for f, is_unfit in predicted_factors.items()
+            if is_unfit and f in assigned_set
+        )
+        
+        # Определяем вердикт
+        verdict = "UNFIT" if final_factors else "FIT"
+        status = "OK"
+        
+        # Подготовка объяснения
+        summary = _build_explanation(
+            verdict, final_factors, exam, confidences, predicted_factors
+        )
+        
+        # Топ-слова (доказательства)
+        evidence = _extract_top_words_evidence(
+            model=final_models.get(final_factors[0]) if final_factors else None,
+            text=text_features,
+            top_n=3
+        )
+        
+        return _analysis_result(
+            status=status,
+            verdict=verdict,
+            summary=summary,
+            factors=final_factors,
+            evidence=evidence,
+            quality_gate=quality_gate,
+            raw_llm_response={
+                "predicted_factors": predicted_factors,
+                "confidences": confidences,
+            },
+            exam=exam,
+        )
+    
+    except Exception as e:
+        return _analysis_result(
+            status="PREDICTION_ERROR",
+            verdict="NEEDS_MORE_INFO",
+            summary=f"Ошибка при анализе: {e}",
+            quality_gate=quality_gate,
+            exam=exam,
+        )
 
 
 def _ensure_exam(row_or_exam: pd.Series | dict[str, Any] | PatientExam) -> PatientExam:
     if isinstance(row_or_exam, PatientExam):
         return row_or_exam
     return build_patient_exam(row_or_exam)
+
+
+def _prepare_exam_text(exam: PatientExam) -> str:
+    """Подготовка текста осмотра для TF-IDF векторизации."""
+    parts = []
+    
+    if exam.specialist_conclusions:
+        parts.append(" ".join(exam.specialist_conclusions))
+    
+    if exam.assigned_harmful_factors:
+        parts.append(" ".join(exam.assigned_harmful_factors))
+    
+    if exam.diagnoses:
+        parts.append(" ".join(exam.diagnoses))
+    
+    if exam.icd_codes:
+        parts.append(" ".join(exam.icd_codes))
+    
+    return " ".join(parts)
+
+
+def _build_explanation(
+    verdict: str,
+    factors: tuple[str, ...],
+    exam: PatientExam,
+    confidences: dict[str, float],
+    all_predictions: dict[str, bool],
+) -> str:
+    """Формирование текстового объяснения."""
+    if verdict == "FIT":
+        return (
+            f"Осмотр пациента #{exam.exam_row_id}: явных противопоказаний не выявлено. "
+            f"Пациент годен к работе с назначенными вредными факторами."
+        )
+    
+    # UNFIT
+    summary_parts = [f"Осмотр пациента #{exam.exam_row_id}: выявлены противопоказания."]
+    
+    for factor in factors:
+        confidence = confidences.get(factor, 0)
+        summary_parts.append(
+            f"• {factor} (доверие: {confidence:.1%})"
+        )
+    
+    summary_parts.append(
+        f"\nДиагнозы: {'; '.join(exam.diagnoses) if exam.diagnoses else 'не указаны'}. "
+        f"Требуется повторная оценка врачом-профпатологом."
+    )
+    
+    return "\n".join(summary_parts)
+
+
+def _extract_top_words_evidence(
+    model,
+    text: str,
+    top_n: int = 3,
+) -> tuple[dict[str, Any], ...]:
+    """Извлечение топ-слов которые повлияли на решение."""
+    if model is None:
+        return ()
+    
+    try:
+        # Получаем TF-IDF векторизатор из pipeline
+        vectorizer = model.named_steps.get("tfidf")
+        if vectorizer is None:
+            return ()
+        
+        # Преобразуем текст
+        vector = vectorizer.transform([text])
+        
+        # Получаем названия признаков (слова)
+        feature_names = vectorizer.get_feature_names_out()
+        
+        # Получаем веса (TF-IDF scores)
+        scores = vector.toarray()[0]
+        
+        # Находим топ-слова
+        top_indices = np.argsort(scores)[-top_n:][::-1]
+        
+        evidence = []
+        for idx in top_indices:
+            if scores[idx] > 0:
+                evidence.append({
+                    "reasoning": f"Найден признак: {feature_names[idx]}",
+                    "score": float(scores[idx]),
+                })
+        
+        return tuple(evidence)
+    
+    except Exception:
+        return ()
+
 
 
 def _build_analysis_from_llm(

@@ -1,14 +1,12 @@
-import asyncio
-
 import pandas as pd
 import streamlit as st
 
 from medhack_ai_assistant.config import ID_COLUMN, TARGET_COLUMN, TEST_PATH, TRAIN_PATH
 from medhack_ai_assistant.data import load_data
 from medhack_ai_assistant.domain.models import PatientExam
-from medhack_ai_assistant.pipeline import analyze_patient_exam, run_quality_gate
+from medhack_ai_assistant.pipeline import run_quality_gate
 from medhack_ai_assistant.services.dashboard import build_patient_exam
-from medhack_ai_assistant.ui.ai_rendering import render_analysis_result
+from medhack_ai_assistant.services.remote_agent import run_remote_analysis
 from medhack_ai_assistant.ui.formatters import readable_dataframe, translate_quality_reason
 from medhack_ai_assistant.ui.styles import render_global_styles
 from medhack_ai_assistant.ui.cards import render_patient_summary_card
@@ -126,12 +124,13 @@ def render_ai_action(exam: PatientExam) -> None:
     )
 
     if st.button("Запустить AI-анализ", type="primary", width="stretch"):
-        with st.spinner("Анализирую осмотр..."):
+        with st.spinner("Сервер анализирует осмотр..."):
             try:
-                result = asyncio.run(analyze_patient_exam(exam))
+                result = run_remote_analysis(int(exam.exam_row_id))
             except Exception as exc:
-                st.error(f"AI-анализ не выполнен: {exc}")
+                st.error(f"Ошибка AI-анализа: {exc}")
                 return
+        st.success("AI-анализ завершён")
         st.session_state["ai_result"] = result
         st.session_state["ai_result_exam_id"] = exam.exam_row_id
 
@@ -147,7 +146,7 @@ def render_ai_section(exam: PatientExam) -> None:
         st.info("Запустите AI-анализ, чтобы увидеть результат по выбранному осмотру.")
         return
 
-    render_analysis_result(result)
+    st.json(result)
 
 
 @st.cache_data(show_spinner=False)
