@@ -47,14 +47,12 @@ def get_dashboard_by_exam_id(
 def build_dashboard(row: pd.Series | dict[str, Any]) -> DashboardResult:
     exam = build_patient_exam(row)
     diagnoses = _build_diagnosis_findings(exam.specialist_conclusions)
-    attention_items = _build_attention_findings(exam.specialist_conclusions)
     normal_items = _build_normal_findings(exam.specialist_conclusions)
-    decision_label, decision_reason = _build_decision(exam, diagnoses, attention_items)
+    decision_label, decision_reason = _build_decision(exam, diagnoses)
 
     return DashboardResult(
         exam=exam,
         diagnoses=diagnoses,
-        attention_items=attention_items,
         normal_items=normal_items,
         decision_label=decision_label,
         decision_reason=decision_reason,
@@ -93,34 +91,6 @@ def _build_diagnosis_findings(
     )
 
 
-def _build_attention_findings(
-    conclusions: tuple[SpecialistConclusion, ...],
-) -> tuple[DashboardFinding, ...]:
-    findings: list[DashboardFinding] = []
-
-    for conclusion in conclusions:
-        if not conclusion.has_attention_marker:
-            continue
-        if conclusion.has_diagnosis:
-            continue
-
-        details = conclusion.conclusion or conclusion.health_group
-        if not details:
-            continue
-
-        findings.append(
-            DashboardFinding(
-                title=conclusion.specialist or "Осмотр",
-                status="attention",
-                details=details,
-                source_specialist=conclusion.specialist,
-                source_date=conclusion.consultation_date,
-                mkb_code=conclusion.mkb_code,
-            )
-        )
-
-    return tuple(findings)
-
 
 def _build_normal_findings(
     conclusions: tuple[SpecialistConclusion, ...],
@@ -135,14 +105,13 @@ def _build_normal_findings(
             mkb_code=conclusion.mkb_code,
         )
         for conclusion in conclusions
-        if not conclusion.has_attention_marker
+        if conclusion.has_diagnosis
     )
 
 
 def _build_decision(
     exam: PatientExam,
     diagnoses: tuple[DashboardFinding, ...],
-    attention_items: tuple[DashboardFinding, ...],
 ) -> tuple[str, str]:
     if exam.has_contraindications is True:
         factors = ", ".join(exam.contraindicated_factors) or "не указаны"
@@ -151,8 +120,8 @@ def _build_decision(
     if exam.has_contraindications is False:
         return "Противопоказания не указаны", "В обучающих данных для этого осмотра нет противопоказаний."
 
-    if diagnoses or attention_items:
-        return "Требует внимания", "Найдены диагнозы, группы здоровья или текстовые заключения, которые стоит проверить врачу."
+    if diagnoses:
+        return "??????? ????????", "? ????????? ????????????????? ?????? ???? ????????, ??????? ????? ?????? AI-????????."
 
     return "Явных отклонений не найдено", "В доступных структурированных данных нет диагнозов или маркеров внимания."
 

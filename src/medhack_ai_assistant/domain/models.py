@@ -15,10 +15,7 @@ class SpecialistConclusion:
     def has_diagnosis(self) -> bool:
         return bool(self.mkb_code and self.mkb_code != "Z00.0")
 
-    @property
-    def has_attention_marker(self) -> bool:
-        normal_health_group = self.health_group.strip().lower()
-        return self.has_diagnosis or bool(self.conclusion) or normal_health_group not in {"", "1 группа"}
+
 
 
 @dataclass(frozen=True)
@@ -46,7 +43,6 @@ class DashboardFinding:
 class DashboardResult:
     exam: PatientExam
     diagnoses: tuple[DashboardFinding, ...]
-    attention_items: tuple[DashboardFinding, ...]
     normal_items: tuple[DashboardFinding, ...]
     decision_label: str
     decision_reason: str

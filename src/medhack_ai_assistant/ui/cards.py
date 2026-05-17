@@ -10,7 +10,6 @@ def render_patient_summary_card(
     exam: PatientExam,
     *,
     risks_count: int = 0,
-    attention_count: int = 0,
     data_status: str = "готово к AI-анализу",
 ) -> None:
     conclusions_count = len(exam.specialist_conclusions)
@@ -41,13 +40,6 @@ def render_patient_summary_card(
                 status="warn",
             )
 
-            render_patient_stat(
-                icon="⚠️",
-                label="Требуют внимания",
-                value=str(attention_count),
-                status="bad",
-            )
-
 
 def render_patient_stat(
     *,
@@ -74,9 +66,6 @@ def render_patient_summary(exam: PatientExam) -> None:
     render_patient_summary_card(
         exam,
         risks_count=len(exam.assigned_harmful_factors),
-        attention_count=sum(
-            1 for conclusion in exam.specialist_conclusions if conclusion.has_attention_marker
-        ),
     )
 
     row = st.session_state.get("selected_row")
