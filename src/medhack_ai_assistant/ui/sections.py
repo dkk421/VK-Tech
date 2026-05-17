@@ -11,7 +11,7 @@ from medhack_ai_assistant.services.document_export import (
     generate_medical_docx,
 )
 from medhack_ai_assistant.ui.ai_rendering import render_analysis_result
-from medhack_ai_assistant.ui.formatters import readable_dataframe, translate_quality_reason
+from medhack_ai_assistant.ui.formatters import readable_dataframe
 from medhack_ai_assistant.ui.styles import render_global_styles
 from medhack_ai_assistant.ui.cards import render_patient_summary_card
 from solution import analyze_row, analyze_row_as_result, format_factors
@@ -115,15 +115,6 @@ def render_detailed_data(dataframe: pd.DataFrame) -> None:
 
 
 def render_ai_action(exam: PatientExam) -> None:
-    quality = run_quality_gate(exam)
-
-    if quality.can_analyze:
-        st.success("Данных достаточно для анализа.")
-    else:
-        st.warning("Данных недостаточно для надежного анализа.")
-        for reason in quality.reasons:
-            st.write(f"- {translate_quality_reason(reason)}")
-
     if st.button("Запустить AI-анализ", type="primary", width="stretch"):
         with st.spinner("Анализирую осмотр..."):
             try:
